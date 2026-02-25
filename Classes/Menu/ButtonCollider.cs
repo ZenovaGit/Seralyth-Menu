@@ -44,7 +44,7 @@ namespace Seralyth.Classes.Menu
 			{
 				if (Random.Range(1, 5) == 2)
 				{
-					NotificationManager.SendNotification("Try again loser >:3");
+					NotificationManager.SendNotification("Error");
 					return;
 				}
 			}

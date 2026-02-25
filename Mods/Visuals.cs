@@ -2962,7 +2962,7 @@ namespace Seralyth.Mods
                     {
                         if (!compactNameTags.ContainsKey(vrrig))
                         {
-                            GameObject textContainer = new GameObject("iimenu_vrctag_text");
+                            GameObject textContainer = new GameObject("seralyth_vrctag_text");
                             if (hoc)
                                 textContainer.layer = 19;
 
@@ -2985,7 +2985,7 @@ namespace Seralyth.Mods
                             nameMesh.alignment = TextAlignmentOptions.Center;
                             nameMesh.richText = true;
 
-                            GameObject bgContainer = new GameObject("iimenu_vrctag_background");
+                            GameObject bgContainer = new GameObject("seralyth_vrctag_background");
                             if (hoc)
                                 bgContainer.layer = 19;
 

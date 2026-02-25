@@ -255,7 +255,7 @@ exit";
         {
             if (discord == null)
             {
-                discord = new DiscordRpcClient("1436519874368114850")
+                discord = new DiscordRpcClient("1396080212441042944")
                 {
                     Logger = new Managers.DiscordRPC.Logging.DiscordLogManager()
                 };

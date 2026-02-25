@@ -317,13 +317,10 @@ namespace Seralyth.Managers
 
                 motdHeadingText.richText = true;
                 motdHeadingText.SafeSetFontSize(100);
-                motdHeadingText.SafeSetText($"Thanks for using {(doCustomName ? customMenuName : "ii's <b>Stupid</b> Menu")}!");
+                motdHeadingText.SafeSetText($"Thanks for using {(doCustomName ? customMenuName : menuName)}!");
                 motdHeadingText.SafeSetFontStyle(activeFontStyle);
                 motdHeadingText.SafeSetFont(activeFont);
                 FollowMenuSettings(motdHeadingText, -4f);
-
-                if (doCustomName)
-                    motdHeadingText.SafeSetText("Thanks for using " + NoRichtextTags(customMenuName) + "!");
 
                 motdHeadingText.SafeSetText(FollowMenuSettings(motdHeadingText.text));
 

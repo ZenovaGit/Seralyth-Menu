@@ -1026,35 +1026,39 @@ exit 0";
 
             switch (themeType)
             {
-                case 1: // Orange
+                case 1: // Seralyth
                     backgroundColor = new ExtGradient
                     {
-                        colors = ExtGradient.GetSimpleGradient(new Color32(255, 128, 0, 128), new Color32(255, 102, 0, 128))
+                        colors = ExtGradient.GetSolidGradient(new Color32(118, 6, 252, 128))
+                    };
+                    menuBackgroundColor = new ExtGradient
+                    {
+                        colors = ExtGradient.GetSolidGradient(new Color32(22, 22, 22, 128))
                     };
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
                         {
-                            colors = ExtGradient.GetSolidGradient(new Color32(170, 85, 0, 255))
+                            colors = ExtGradient.GetSolidGradient(new Color32(118, 6, 252, 255))
                         },
                         new ExtGradient // Pressed
                         {
-                            colors = ExtGradient.GetSolidGradient(new Color32(85, 42, 0, 255))
+                            colors = ExtGradient.GetSolidGradient(new Color32(88, 6, 186, 255))
                         }
                     };
                     textColors = new[]
                     {
                         new ExtGradient // Title
                         {
-                            colors = ExtGradient.GetSolidGradient(new Color32(255, 190, 125, 255))
-                        },
+                            colors = ExtGradient.GetSolidGradient(Color.white)
+                        },  
                         new ExtGradient // Button Released
                         {
-                            colors = ExtGradient.GetSolidGradient(new Color32(255, 190, 125, 255))
+                            colors = ExtGradient.GetSolidGradient(Color.white)
                         },
                         new ExtGradient // Button Clicked
                         {
-                            colors = ExtGradient.GetSolidGradient(new Color32(255, 190, 125, 255))
+                            colors = ExtGradient.GetSolidGradient(Color.white)
                         }
                     };
                     break;
@@ -4207,7 +4211,7 @@ exit 0";
             if (pageButtonType < 1)
                 pageButtonType = 6;
 
-            buttonOffset = pageButtonType == 1 ? 2 : 0;
+            buttonOffset = pageButtonType == 2 ? 2 : 0;
         }
 
         public static void ChangePageSize(bool positive = true)
@@ -6398,7 +6402,7 @@ exit 0";
             if (Important.reconnectDelay < 1)
                 Important.reconnectDelay = 5;
 
-            Buttons.GetIndex("crTime").overlapText = "Change Reconnect Time <color=grey>[</color><color=green>" + Important.reconnectDelay + "</color><color=grey>]</color>";
+            Buttons.GetIndex("Change Reconnect Time").overlapText = "Change Reconnect Time <color=grey>[</color><color=green>" + Important.reconnectDelay + "</color><color=grey>]</color>";
         }
 
         public static void ChangeButtonSound(bool positive = true, bool fromMenu = false)

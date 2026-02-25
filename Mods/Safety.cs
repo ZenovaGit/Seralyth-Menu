@@ -679,7 +679,7 @@ namespace Seralyth.Mods
 
         public static void ChangeIdentityCustom()
         {
-            string[] names = { "goldentrophy", "me" };
+            string[] names = { "seralyth", "me" };
             Color[] colors = { new Color32(255, 128, 0, 255), Color.white };
 
             string fileName = $"{PluginInfo.BaseDirectory}/CustomIdentities.txt";
@@ -689,7 +689,7 @@ namespace Seralyth.Mods
                 names = data[0].Split(";");
                 colors = data[1].Split(";").Select(HexToColor).ToArray();
             } else
-                File.WriteAllText(fileName, "goldentrophy;me\nff8000;ffffff");
+                File.WriteAllText(fileName, "seralyth;me\n9b59b6;ffffff");
 
             string name = names[Random.Range(0, names.Length)];
             Color color = colors[Random.Range(0, colors.Length)];

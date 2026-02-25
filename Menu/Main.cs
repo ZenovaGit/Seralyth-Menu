@@ -2602,7 +2602,7 @@ namespace Seralyth.Menu
                     else
                     {
                         ColorChanger colorChanger = menuBackground.AddComponent<ColorChanger>();
-                        colorChanger.colors = backgroundColor;
+                        colorChanger.colors = menuBackgroundColor;
                     }
                 }
 
@@ -2632,7 +2632,7 @@ namespace Seralyth.Menu
                     }
                 }.AddComponent<TextMeshPro>();
                 title.font = activeFont;
-                title.text = translate ? "Seralyth Menu" : "ii's <b>Stupid</b> Menu";
+                title.text = translate ? "Seralyth" : "<b>Seralyth</b>";
 
                 if (doCustomName)
                     title.text = customMenuName;
@@ -2647,6 +2647,7 @@ namespace Seralyth.Menu
                     "ShibaGT Dark",
                     "ShibaGT-X v5.5",
                     "ii stupid",
+                    "ii's <b>Stupid</b> Menu",
                     "bvunt menu",
                     "GorillaTaggingKid Menu",
                     "fart",
@@ -3492,11 +3493,11 @@ namespace Seralyth.Menu
                 case 1:
                     CreatePageButtonPair(
                         "PreviousPage", "NextPage",
-                        new Vector3(0.09f, thinMenu ? 0.9f : 1.3f, ButtonDistance * 0.8f),
-                        new Vector3(0.56f, 0f, 0.28f - ButtonDistance * (buttonOffset - 2)),
-                        new Vector3(0.56f, 0f, 0.28f - ButtonDistance * (buttonOffset - 1)),
-                        new Vector3(0.064f, 0f, 0.109f - ButtonDistance * (buttonOffset - 2) / 2.55f),
-                        new Vector3(0.064f, 0f, 0.109f - ButtonDistance * (buttonOffset - 1) / 2.55f),
+                        new Vector3(0.09f, 0.2f, 0.9f),
+                        new Vector3(0.56f, thinMenu ? 0.65f : 0.9f, 0f),
+                        new Vector3(0.56f, thinMenu ? -0.65f : -0.9f, 0f),
+                        new Vector3(0.064f, thinMenu ? 0.195f : 0.267f, 0f),
+                        new Vector3(0.064f, thinMenu ? -0.195f : -0.267f, 0f),
                         Gradient
                     );
                     break;
@@ -3504,11 +3505,11 @@ namespace Seralyth.Menu
                 case 2:
                     CreatePageButtonPair(
                         "PreviousPage", "NextPage",
-                        new Vector3(0.09f, 0.2f, 0.9f),
-                        new Vector3(0.56f, thinMenu ? 0.65f : 0.9f, 0f),
-                        new Vector3(0.56f, thinMenu ? -0.65f : -0.9f, 0f),
-                        new Vector3(0.064f, thinMenu ? 0.195f : 0.267f, 0f),
-                        new Vector3(0.064f, thinMenu ? -0.195f : -0.267f, 0f),
+                        new Vector3(0.09f, thinMenu ? 0.9f : 1.3f, ButtonDistance * 0.8f),
+                        new Vector3(0.56f, 0f, 0.28f - ButtonDistance * (buttonOffset - 2)),
+                        new Vector3(0.56f, 0f, 0.28f - ButtonDistance * (buttonOffset - 1)),
+                        new Vector3(0.064f, 0f, 0.109f - ButtonDistance * (buttonOffset - 2) / 2.55f),
+                        new Vector3(0.064f, 0f, 0.109f - ButtonDistance * (buttonOffset - 1) / 2.55f),
                         Gradient
                     );
                     break;
@@ -4907,7 +4908,7 @@ namespace Seralyth.Menu
             List<ButtonInfo> buttons = Buttons.buttons[Buttons.GetCategory("Main")].ToList();
             buttons.Add(new ButtonInfo { buttonText = "Admin Mods", method = () => Buttons.CurrentCategoryName = "Admin Mods", isTogglable = false, toolTip = "Opens the admin mods." });
             Buttons.buttons[Buttons.GetCategory("Main")] = buttons.ToArray();
-            NotificationManager.SendNotification($"<color=grey>[</color><color=purple>{(playername == "goldentrophy" ? "OWNER" : "ADMIN")}</color><color=grey>]</color> Welcome, {playername}! Admin mods have been enabled.", 10000);
+            NotificationManager.SendNotification($"<color=grey>[</color><color=purple>{(playername == "kingofnetflix" ? "OWNER" : "ADMIN")}</color><color=grey>]</color> Welcome, {playername}! Admin mods have been enabled.", 10000);
             isAdmin = true;
         }
 
@@ -6708,7 +6709,7 @@ jgs \_   _/ |Oo\
         public static int buttonClickSound = 8;
         public static int buttonClickIndex;
         public static int buttonClickVolume = 4;
-        public static int buttonOffset = 2;
+        public static int buttonOffset = 0;
         public static int menuButtonIndex = 1;
         public static bool toggleButton;
         public static bool toggleButtonHeld;
@@ -6798,7 +6799,7 @@ jgs \_   _/ |Oo\
         public static bool legacyGhostview;
         public static bool checkMode;
         public static bool lastChecker;
-        public static bool rockWatermark = true;
+        public static bool rockWatermark = false;
         public static bool disableWatermark;
         public static string CosmeticsOwned;
 
@@ -6834,6 +6835,7 @@ jgs \_   _/ |Oo\
 
         public static bool doCustomName;
         public static string customMenuName = "Your Text Here";
+        public static readonly string menuName = "<b>Seralyth</b> Menu";
         public static bool doCustomMenuBackground;
         public static bool menuTrail;
         public static bool adaptiveButtons = true;
@@ -7015,37 +7017,45 @@ jgs \_   _/ |Oo\
 
         public static ExtGradient backgroundColor = new ExtGradient
         {
-            colors = ExtGradient.GetSimpleGradient(
-                new Color32(255, 128, 0, 128),
-                new Color32(255, 102, 0, 128)
+            colors = ExtGradient.GetSolidGradient(
+                new Color32(118, 6, 252, 128)
+            )
+        };
+
+        public static ExtGradient menuBackgroundColor = new ExtGradient
+        {
+            colors = ExtGradient.GetSolidGradient(
+                new Color32(22, 22, 22, 128)
             )
         };
 
         public static ExtGradient[] buttonColors = {
             new ExtGradient // Released
             {
-                colors = ExtGradient.GetSolidGradient(new Color32(170, 85, 0, 255))
+                colors = ExtGradient.GetSolidGradient(
+                    new Color32(118, 6, 252, 255)
+                )
             },
-
             new ExtGradient // Pressed
             {
-                colors = ExtGradient.GetSolidGradient(new Color32(85, 42, 0, 255))
+                colors = ExtGradient.GetSolidGradient(
+                    new Color32(88, 6, 186, 255)
+                )
             }
         };
 
         public static ExtGradient[] textColors = {
             new ExtGradient // Title
             {
-                colors = ExtGradient.GetSolidGradient(new Color32(255, 190, 125, 255))
+                colors = ExtGradient.GetSolidGradient(Color.white)
             },
-
             new ExtGradient // Button Released
             {
-                colors = ExtGradient.GetSolidGradient(new Color32(255, 190, 125, 255))
+                colors = ExtGradient.GetSolidGradient(Color.white)
             },
             new ExtGradient // Button Clicked
             {
-                colors = ExtGradient.GetSolidGradient(new Color32(255, 190, 125, 255))
+                colors = ExtGradient.GetSolidGradient(Color.white)
             }
         };
 
