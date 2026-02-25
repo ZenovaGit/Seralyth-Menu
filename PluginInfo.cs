@@ -27,7 +27,7 @@ namespace Seralyth
         public const string Name = "Seralyth Menu";
         public const string Description = "Created by kingofnetflix";
         public const string BuildTimestamp = "2026-02-23T03:36:03Z";
-        public const string Version = "8.3.0";
+        public const string Version = "1.0.0";
 
         public const string BaseDirectory = "SeralythMenu";
         public const string ClientResourcePath = "Seralyth.Resources.Client";
