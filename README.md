@@ -1,9 +1,5 @@
-Thank you guys for 2 years, it's been a pleasure <3
-
-
 <p align="center">
   <a href="#"><img src="Resources/GitHub/icon.png"></a>
-  <a href="#"><img src="Resources/GitHub/title.png"></a>
 </p>
 
 ---
@@ -11,16 +7,14 @@ Thank you guys for 2 years, it's been a pleasure <3
 <p align="center">
 	<a href="https://github.com/Seralyth/Seralyth-Menu/releases"><img src="https://img.shields.io/github/v/release/iiDk-the-actual/iis.Stupid.Menu?label=version&style=for-the-badge"></a>
 	<a href="https://github.com/Seralyth/Seralyth-Menu/releases/latest"><img src="https://img.shields.io/github/downloads/iiDk-the-actual/iis.Stupid.Menu/latest/iis_Stupid_Menu.dll?style=for-the-badge"></a>
-	<a href="https://discord.gg/iidk"><img src="https://img.shields.io/discord/1170093288557129748?label=discord&style=for-the-badge&color=blueviolet"></a>
+	<a href="https://discord.gg/seralyth"><img src="https://img.shields.io/discord/1170093288557129748?label=discord&style=for-the-badge&color=blueviolet"></a>
 </p>
 
 ---
 
 # <img src="Resources/GitHub/cone-emoji.png" height=26px> Seralyth Menu  
 
-Seralyth Menu is a **feature-packed** mod menu for Gorilla Tag, built by me, [**iiDk**](https://github.com/iiDk-the-actual). Whether you just want mods, are a developer, or anything inbetween, this menu has you covered. Designed to be **as useful as possible**, it includes a variety of features and options that let you customize your modding experience to your heart’s content.  
-
-> Why settle for boring when you can have *stupidly* good?  
+Seralyth Menu is a **feature-packed** mod menu for Gorilla Tag, built by the community, for the community. Whether you just want mods, are a developer, or anything inbetween, this menu has you covered. Designed to be **as useful as possible**, it includes a variety of features and options that let you customize your modding experience to your heart’s content.  
 
 <details>
   <summary><b>💡 Why open-source?</b></summary>
@@ -46,16 +40,13 @@ Let's bring back the collaboration of modding. No paywalls, no secrets, no malwa
 - No shady stuff.
 - **[Follow the license.](https://www.gnu.org/licenses/gpl-3.0.html)**
 
-> "You wouldn’t steal a method."<br>
-> [🎥 *(Or would you?)*](https://www.youtube.com/watch?v=zMBqPdMzZ9E)
-
 </details>
 
 <details>
   <summary><b>💾 Installation</b></summary>
 	
 1. **Download** the latest release **[here](https://github.com/Seralyth/Seralyth-Menu/releases/latest)**
-2. **Drag & Drop** `iis_Stupid_Menu.dll` into your plugins folder  
+2. **Drag & Drop** `Seralyth-Menu.dll` into your plugins folder  
 3. **Launch** Gorilla Tag and enjoy!
 
 **🧱 From Source Code (for developers!)**
@@ -108,33 +99,26 @@ Let's bring back the collaboration of modding. No paywalls, no secrets, no malwa
 <details>
   <summary><b>🗣️ Contact Information</b></summary>
 	
-Need help or want to collaborate? Here are some of my sources of contact:
-- Telegram: [@crimsoncauldron](https://t.me/crimsoncauldron)
-- Discord: [@crimsoncauldron](https://discord.gg/iidk)
-- YouTube: [@iiDk_](https://www.youtube.com/@iiDk_)
-- Email: [admin@goldentrophy.software](mailto:admin@goldentrophy.software)
+Join our [Discord](https://discord.gg/seralyth)!
 
 </details>
 
 <details open>
   <summary><b>💖 Support</b></summary>
 	
-If you wish to support me, here are some of the ways you can!
+If you wish to support us, here are some of the ways you can!
 
 | Platform   | Link | Address |
 |------------|------|---------|
-| Bitcoin    | [![BTC](https://img.shields.io/badge/Bitcoin-Donate-yellow?style=for-the-badge&logo=bitcoin)](bitcoin:bc1qtmrqtq4ag720tvux64ff3rjp632jy2d447p3nx) | [bc1qtmrqtq4ag720tvux64ff3rjp632jy2d447p3nx](bitcoin:bc1qtmrqtq4ag720tvux64ff3rjp632jy2d447p3nx) |
-| Ethereum   | [![ETH](https://img.shields.io/badge/Ethereum-Donate-blue?style=for-the-badge&logo=ethereum)](ethereum:0xa1A78771422F602d9Ded0E8373d5A3D77E146877) | [0xa1A78771422F602d9Ded0E8373d5A3D77E146877](ethereum:0xa1A78771422F602d9Ded0E8373d5A3D77E146877) |
-| Litecoin   | [![LTC](https://img.shields.io/badge/Litecoin-Donate-lightgrey?style=for-the-badge&logo=litecoin)](litecoin:LaoNB7KADaGGb5ik8RhEBhAFdhM9pu5se5) | [LaoNB7KADaGGb5ik8RhEBhAFdhM9pu5se5](litecoin:LaoNB7KADaGGb5ik8RhEBhAFdhM9pu5se5) |
-| XRP        | [![XRP](https://img.shields.io/badge/XRP-Donate-23292F?style=for-the-badge&logo=xrp)](xrp:rpLLN1Gse5zFnVxwQkMvh6jvKKtPrAjvLV) | [rpLLN1Gse5zFnVxwQkMvh6jvKKtPrAjvLV](xrp:rpLLN1Gse5zFnVxwQkMvh6jvKKtPrAjvLV) |
-| Patreon    | [![Patreon](https://img.shields.io/badge/Patreon-iiDk-orange?style=for-the-badge&logo=patreon)](https://www.patreon.com/iiDk) | [iiDk](https://www.patreon.com/iiDk) |
-| CashApp    | [![CashApp](https://img.shields.io/badge/CashApp-$iiWasHere-green?style=for-the-badge&logo=cashapp)](https://cash.app/$iiWasHere) | [$iiWasHere](https://cash.app/$iiWasHere) |
+| Ethereum   | [![ETH](https://img.shields.io/badge/Ethereum-Donate-blue?style=for-the-badge&logo=ethereum)](ethereum:0xc14846DF02f45D02a3A5750B21e6e1533ab129Dd) | [0xc14846DF02f45D02a3A5750B21e6e1533ab129Dd](ethereum:0xc14846DF02f45D02a3A5750B21e6e1533ab129Dd) |
+| Litecoin   | [![LTC](https://img.shields.io/badge/Litecoin-Donate-lightgrey?style=for-the-badge&logo=litecoin)](litecoin:Ld5c7DVKgq7EnCLJs6DhwHi8eLhPYGQtC9) | [Ld5c7DVKgq7EnCLJs6DhwHi8eLhPYGQtC9](litecoin:Ld5c7DVKgq7EnCLJs6DhwHi8eLhPYGQtC9) |
+| Patreon    | [![Patreon](https://img.shields.io/badge/Patreon-iiDk-orange?style=for-the-badge&logo=patreon)](https://www.patreon.com/Seralyth) | [Seralyth](https://www.patreon.com/Seralyth) |
 
 </details>
 
 > [!NOTE] 
 > This product is not affiliated with Gorilla Tag or Another Axiom LLC and is not endorsed or otherwise sponsored by Another Axiom LLC. Portions of the materials contained herein are property of Another Axiom LLC. © 2026 Another Axiom LLC.<br>
-> Menu sends requests to https://iidk.online for telemetry, administrative, and TTS (text to speech) purposes.<br>
+> Menu sends requests to https://menu.seralyth.software for telemetry, administrative, and TTS (text to speech) purposes.<br>
 > Menu sends requests to https://text.pollinations.ai for the mod **AI Assistant**. (when enabled)<br>
 > Menu sends requests to https://lazypy.ro for many TTS voices.<br>
 > Menu connects to wss://iidk.online for friend system and administrative purposes.<br>
@@ -158,7 +142,3 @@ If you wish to support me, here are some of the ways you can!
 > 
 > You should have received a copy of the GNU General Public License
 > along with this program.  If not, see <https://www.gnu.org/licenses>.
-
-<p align="center">
-  <img src="Resources/GitHub/byebye.gif">
-</p>
