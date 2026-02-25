@@ -1,18 +1,18 @@
 <p align="center">
-  <a href="#"><img src="Resources/GitHub/icon.png"></a>
+  <a href="#"><img src="Resources/GitHub/icon-transparent.png"></a>
 </p>
 
 ---
 
 <p align="center">
-	<a href="https://github.com/Seralyth/Seralyth-Menu/releases"><img src="https://img.shields.io/github/v/release/iiDk-the-actual/iis.Stupid.Menu?label=version&style=for-the-badge"></a>
-	<a href="https://github.com/Seralyth/Seralyth-Menu/releases/latest"><img src="https://img.shields.io/github/downloads/iiDk-the-actual/iis.Stupid.Menu/latest/iis_Stupid_Menu.dll?style=for-the-badge"></a>
-	<a href="https://discord.gg/seralyth"><img src="https://img.shields.io/discord/1170093288557129748?label=discord&style=for-the-badge&color=blueviolet"></a>
+	<a href="https://github.com/Seralyth/Seralyth-Menu/releases"><img src="https://img.shields.io/github/v/release/Seralyth/Seralyth-Menu?label=version&style=for-the-badge"></a>
+	<a href="https://github.com/Seralyth/Seralyth-Menu/releases/latest"><img src="https://img.shields.io/github/downloads/Seralyth/Seralyth-Menu/latest/Seralyth-Menu.dll?style=for-the-badge"></a>
+	<a href="https://discord.gg/seralyth"><img src="https://img.shields.io/discord/1437865660351774730?label=discord&style=for-the-badge&color=blueviolet"></a>
 </p>
 
 ---
 
-# <img src="Resources/GitHub/icon-transparent.png" height=26px> Seralyth Menu  
+# Seralyth Menu  
 
 Seralyth Menu is a **feature-packed** mod menu for Gorilla Tag, built by the community, for the community. Whether you just want mods, are a developer, or anything inbetween, this menu has you covered. Designed to be **as useful as possible**, it includes a variety of features and options that let you customize your modding experience to your heart’s content.  
 
