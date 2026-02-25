@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Mods/Overpowered.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Mods/Overpowered.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -27,12 +27,12 @@ using GorillaLocomotion.Gameplay;
 using GorillaNetworking;
 using GorillaTagScripts;
 using GorillaTagScripts.VirtualStumpCustomMaps;
-using iiMenu.Classes.Menu;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Patches.Menu;
-using iiMenu.Utilities;
+using Seralyth.Classes.Menu;
+using Seralyth.Extensions;
+using Seralyth.Managers;
+using Seralyth.Menu;
+using Seralyth.Patches.Menu;
+using Seralyth.Utilities;
 using Ionic.Zlib;
 using Photon.Pun;
 using Photon.Realtime;
@@ -45,17 +45,17 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.AssetUtilities;
-using static iiMenu.Utilities.GameModeUtilities;
-using static iiMenu.Utilities.RandomUtilities;
-using static iiMenu.Utilities.RigUtilities;
+using static Seralyth.Menu.Main;
+using static Seralyth.Utilities.AssetUtilities;
+using static Seralyth.Utilities.GameModeUtilities;
+using static Seralyth.Utilities.RandomUtilities;
+using static Seralyth.Utilities.RigUtilities;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 using JoinType = GorillaNetworking.JoinType;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
-namespace iiMenu.Mods
+namespace Seralyth.Mods
 {
     public static class Overpowered
     {

@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Patches/Menu/BanPatches.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Patches/Menu/BanPatches.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,14 +21,14 @@
 
 using GorillaNetworking;
 using HarmonyLib;
-using iiMenu.Managers;
+using Seralyth.Managers;
 using PlayFab;
 using PlayFab.CloudScriptModels;
 using PlayFab.Internal;
 using System;
 using System.Collections.Generic;
 
-namespace iiMenu.Patches.Menu
+namespace Seralyth.Patches.Menu
 {
     public class BanPatches
     {

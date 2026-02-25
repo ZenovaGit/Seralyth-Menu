@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Menu/Buttons.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Menu/Buttons.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,12 +23,12 @@ using GorillaLocomotion;
 using GorillaNetworking;
 using GorillaTagScripts;
 using GorillaTagScripts.ObstacleCourse;
-using iiMenu.Classes.Menu;
-using iiMenu.Managers;
-using iiMenu.Mods;
-using iiMenu.Patches.Menu;
-using iiMenu.Patches.Safety;
-using iiMenu.Utilities;
+using Seralyth.Classes.Menu;
+using Seralyth.Managers;
+using Seralyth.Mods;
+using Seralyth.Patches.Menu;
+using Seralyth.Patches.Safety;
+using Seralyth.Utilities;
 using Photon.Pun;
 using System;
 using System.Collections.Generic;
@@ -37,13 +37,13 @@ using System.IO;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.RandomUtilities;
-using static iiMenu.Utilities.RigUtilities;
-using Console = iiMenu.Classes.Menu.Console;
+using static Seralyth.Menu.Main;
+using static Seralyth.Utilities.RandomUtilities;
+using static Seralyth.Utilities.RigUtilities;
+using Console = Seralyth.Classes.Menu.Console;
 using Random = UnityEngine.Random;
 
-namespace iiMenu.Menu
+namespace Seralyth.Menu
 {
     public static class Buttons
     {
@@ -51,13 +51,13 @@ namespace iiMenu.Menu
         {
             new[] { // Main [0]
                 
-                new ButtonInfo { buttonText = "Join Discord", method = Important.JoinDiscord, isTogglable = false, toolTip = "Invites you to join the ii's <b>Stupid</b> Mods Discord server."},
+                new ButtonInfo { buttonText = "Join Discord", method = Important.JoinDiscord, isTogglable = false, toolTip = "Invites you to join the <b>Seralyth</b> Discord server."},
 
                 new ButtonInfo { buttonText = "Settings", method =() => CurrentCategoryName = "Settings", isTogglable = false, toolTip = "Opens the settings tab."},
                 new ButtonInfo { buttonText = "Friends", method =() => CurrentCategoryName = "Friends", isTogglable = false, toolTip = "Opens the friends tab."},
                 new ButtonInfo { buttonText = "Players", method = Settings.PlayersTab, isTogglable = false, toolTip = "Opens the players tab."},
 
-                new ButtonInfo { buttonText = "Favorite Mods", method =() => CurrentCategoryName = "Favorite Mods", isTogglable = false, toolTip = "Opens your favorite mods. Favorite mods with left grip."},
+                new ButtonInfo { buttonText = "Favorite Mods", method =() => CurrentCategoryName = "Favorite Mods", isTogglable = false, toolTip = "Opens your favorite mods. Favorite mods with right grip."},
                 new ButtonInfo { buttonText = "Enabled Mods", method =() => CurrentCategoryName = "Enabled Mods", isTogglable = false, toolTip = "Shows all mods you have enabled."},
                 new ButtonInfo { buttonText = "Room Mods", method =() => CurrentCategoryName = "Room Mods", isTogglable = false, toolTip = "Opens the room mods."},
                 new ButtonInfo { buttonText = "Important Mods", method =() => CurrentCategoryName = "Important Mods", isTogglable = false, toolTip = "Opens the important mods."},
@@ -138,7 +138,7 @@ namespace iiMenu.Menu
                 new ButtonInfo { buttonText = "Menu Collisions", enableMethod =() => menuCollisions = true, disableMethod =() => menuCollisions = false, toolTip = "Gives the menu collisions when dropping it."},
                 new ButtonInfo { buttonText = "Player Scale Menu", enableMethod =() => scaleWithPlayer = true, disableMethod =() => scaleWithPlayer = false, toolTip = "Scales the menu with your player scale."},
                 new ButtonInfo { buttonText = "Alphabetize Menu", toolTip = "Alphabetizes the entire menu."},
-                new ButtonInfo { buttonText = "Custom Menu Name", enableMethod = Settings.CustomMenuName, disableMethod =() => doCustomName = false, toolTip = $"Changes the name of the menu to whatever. You can change the text inside of your Gorilla Tag files ({PluginInfo.BaseDirectory}/iiMenu_CustomMenuName.txt)."},
+                new ButtonInfo { buttonText = "Custom Menu Name", enableMethod = Settings.CustomMenuName, disableMethod =() => doCustomName = false, toolTip = $"Changes the name of the menu to whatever. You can change the text inside of your Gorilla Tag files ({PluginInfo.BaseDirectory}/Seralyth_CustomMenuName.txt)."},
                 new ButtonInfo { buttonText = "Menu Trail", enableMethod =() => menuTrail = true, disableMethod =() => menuTrail = false, toolTip = "Gives the menu a trail when you drop."},
 
                 new ButtonInfo { buttonText = "Dynamic Animations", enableMethod =() => dynamicAnimations = true, disableMethod =() => dynamicAnimations = false, toolTip = "Adds more animations to the menu, giving you a better sense of control."},
@@ -198,7 +198,7 @@ namespace iiMenu.Menu
                 new ButtonInfo { buttonText = "Change Arrow Type", method =() => Settings.ChangeArrowType(), enableMethod =() => Settings.ChangeArrowType(), disableMethod =() => Settings.ChangeArrowType(false), incremental = true, isTogglable = false, toolTip = "Changes the type of arrows on the page buttons."},
                 new ButtonInfo { buttonText = "Change Font Type", method =() => Settings.ChangeFontType(), enableMethod =() => Settings.ChangeFontType(), disableMethod =() => Settings.ChangeFontType(false), incremental = true, isTogglable = false, toolTip = "Changes the type of font."},
                 new ButtonInfo { buttonText = "Rapid Font Changer", method = Settings.ChangeFontRapid, toolTip = "Changes the type of font every menu refresh."},
-                new ButtonInfo { buttonText = "Custom Font Type", enableMethod = Settings.CustomFontType, method = Settings.PersistCustomFont, disableMethod = Settings.DisableCustomFont, toolTip = $"Changes the font type on the menu to a custom font. You can change the photo inside of your Gorilla Tag files ({PluginInfo.BaseDirectory}/iiMenu_CustomWatermark.txt)."},
+                new ButtonInfo { buttonText = "Custom Font Type", enableMethod = Settings.CustomFontType, method = Settings.PersistCustomFont, disableMethod = Settings.DisableCustomFont, toolTip = $"Changes the font type on the menu to a custom font. You can change the photo inside of your Gorilla Tag files ({PluginInfo.BaseDirectory}/Seralyth_CustomWatermark.txt)."},
                 new ButtonInfo { buttonText = "Change Font Style Type", method =() => Settings.ChangeFontStyleType(), enableMethod =() => Settings.ChangeFontStyleType(), disableMethod =() => Settings.ChangeFontStyleType(false), incremental = true, isTogglable = false, toolTip = "Changes the style of the font."},
                 new ButtonInfo { buttonText = "Change Input Text Color", overlapText = "Change Input Text Color <color=grey>[</color><color=green>Green</color><color=grey>]</color>", method =() => Settings.ChangeInputTextColor(), enableMethod =() => Settings.ChangeInputTextColor(), disableMethod =() => Settings.ChangeInputTextColor(false), incremental = true, isTogglable = false, toolTip = "Changes the color of the input indicator next to the buttons."},
                 new ButtonInfo { buttonText = "Vibrant Text Colors", enableMethod =() => vibrantColors = true, disableMethod =() => vibrantColors = false, toolTip = "Makes certain green and purple colors more vibrant." },
@@ -243,7 +243,7 @@ namespace iiMenu.Menu
                 new ButtonInfo { buttonText = "No Prefix Narration", enableMethod =() => NotificationManager.noPrefix = true, disableMethod =() => NotificationManager.noPrefix = false, toolTip = "Stops the prefix on notifications from narrating itself."},
                 new ButtonInfo { buttonText = "Hide Notification Brackets", enableMethod =() => hideBrackets = true, disableMethod =() => hideBrackets = false, toolTip = "Hides brackets on all notifications."},
 
-                new ButtonInfo { buttonText = "Conduct Notifications", enableMethod =() => { GetObject("Environment Objects/LocalObjects_Prefab/TreeRoom/CodeOfConductHeadingText").GetComponent<TextMeshPro>().text = "II'S STUPID MENU"; GetObject("Environment Objects/LocalObjects_Prefab/TreeRoom/COCBodyText_TitleData").GetComponent<TextMeshPro>().richText = true; }, method =() => GetObject("Environment Objects/LocalObjects_Prefab/TreeRoom/COCBodyText_TitleData").GetComponent<TextMeshPro>().text = NotificationManager.notificationText.text, toolTip = "Shows notifications on the code of conduct instead."},
+                new ButtonInfo { buttonText = "Conduct Notifications", enableMethod =() => { GetObject("Environment Objects/LocalObjects_Prefab/TreeRoom/CodeOfConductHeadingText").GetComponent<TextMeshPro>().text = "Seralyth Menu"; GetObject("Environment Objects/LocalObjects_Prefab/TreeRoom/COCBodyText_TitleData").GetComponent<TextMeshPro>().richText = true; }, method =() => GetObject("Environment Objects/LocalObjects_Prefab/TreeRoom/COCBodyText_TitleData").GetComponent<TextMeshPro>().text = NotificationManager.notificationText.text, toolTip = "Shows notifications on the code of conduct instead."},
                 new ButtonInfo { buttonText = "Disable Notification Rich Text", enableMethod =() => NotificationManager.noRichText = true, disableMethod =() => NotificationManager.noRichText = false, toolTip = "Removes rich text from notifications."},
 
                 new ButtonInfo { buttonText = "Disable Notifications", enableMethod =() => disableNotifications = true, disableMethod =() => disableNotifications = false, toolTip = "Disables all notifications."},
@@ -462,7 +462,7 @@ namespace iiMenu.Menu
                 new ButtonInfo { buttonText = "Restart Gorilla Tag", aliases = new[] { "Restart Game", "Restart App" }, method = () => Prompt("Are you sure you want to restart Gorilla Tag?", Important.RestartGame), isTogglable = false, toolTip = "Restarts Gorilla Tag." },
                 new ButtonInfo { buttonText = "Open Gorilla Tag Folder", method = Important.OpenGorillaTagFolder, isTogglable = false, toolTip = "Opens the folder in which your game is located." },
 
-                new ButtonInfo { buttonText = "Discord RPC", aliases = new[] { "Self Tracker" }, method = Important.DiscordRPC, disableMethod = Important.DisableDiscordRPC, toolTip = "Gives you a indicator on Discord that you are using ii's Stupid Menu."},
+                new ButtonInfo { buttonText = "Discord RPC", aliases = new[] { "Self Tracker" }, method = Important.DiscordRPC, disableMethod = Important.DisableDiscordRPC, toolTip = "Gives you a indicator on Discord that you are using Seralyth Menu."},
                 new ButtonInfo { buttonText = "Media Integration", aliases = new[] { "Spotify" }, enableMethod = Important.EnsureIntegrationProgram, method = Important.MediaIntegration, disableMethod = Important.DisableMediaIntegration, toolTip = "Shows you what media you are watching/listening to in the top left. To switch media, open the menu and use your left joystick."},
 
                 new ButtonInfo { buttonText = "Anti Hand Tap", enableMethod =() => HandTapPatch.enabled = true, disableMethod =() => HandTapPatch.enabled = false, toolTip = "Stops all hand tap sounds from being played."},
@@ -1594,7 +1594,6 @@ namespace iiMenu.Menu
                 new ButtonInfo { buttonText = "Rainbow Color", method = Fun.RainbowColor, toolTip = "Makes your character rainbow." },
                 new ButtonInfo { buttonText = "Hard Rainbow Color", method = Fun.HardRainbowColor, toolTip = "Makes your character flash from red, green, blue, and magenta." },
 
-                new ButtonInfo { buttonText = "Become \"goldentrophy\"", method =() => Fun.BecomePlayer("goldentrophy", new Color32(255, 128, 0, 255)), isTogglable = false, toolTip = "Sets your name to \"goldentrophy\" and color to orange." },
                 new ButtonInfo { buttonText = "Become \"NOESCAPE\"", method =() => Fun.BecomePlayer("NOESCAPE", Color.black), isTogglable = false, toolTip = "Sets your name to \"NOESCAPE\" and color to black." },
                 new ButtonInfo { buttonText = "Become \"H1D3\"", method =() => Fun.BecomePlayer("H1D3", Color.black), isTogglable = false, toolTip = "Sets your name to \"H1D3\" and color to black." },
                 new ButtonInfo { buttonText = "Become \"PBBV\"", method =() => Fun.BecomePlayer("PBBV", new Color32(230, 127, 102, 255)), isTogglable = false, toolTip = "Sets your name to \"PBBV\" and color to salmon." },
@@ -2153,7 +2152,6 @@ namespace iiMenu.Menu
                 new ButtonInfo { buttonText = "Exit Menu Presets", method =() => CurrentCategoryName = "Menu Settings", isTogglable = false, toolTip = "Returns to the settings for the menu."},
 
                 new ButtonInfo { buttonText = "Legitimate Preset", method = Presets.LegitimatePreset, isTogglable = false, toolTip = "Enables a bunch of mods that make it impossible to mod check you."},
-                new ButtonInfo { buttonText = "Goldentrophy Preset", method = Presets.GoldentrophyPreset, isTogglable = false, toolTip = "Enables the mods that \"goldentrophy\" uses."},
                 new ButtonInfo { buttonText = "Performance Preset", method = Presets.PerformancePreset, isTogglable = false, toolTip = "Enables some mods that attempt to maximize your FPS as much as possible."},
                 new ButtonInfo { buttonText = "Safety Preset", method = Presets.SafetyPreset, isTogglable = false, toolTip = "Enables some mods that attempt to keep you as safe as possible."},
                 new ButtonInfo { buttonText = "Ghost Preset", method = Presets.GhostPreset, isTogglable = false, toolTip = "Enables a bunch of mods that are commonly used for ghost trolling."},
@@ -2351,7 +2349,7 @@ namespace iiMenu.Menu
                 new ButtonInfo { buttonText = "Search", method = Settings.Search, isTogglable = false, toolTip = "Lets you search for specific mods."},
                 new ButtonInfo { buttonText = "Global Return", method = Settings.GlobalReturn, isTogglable = false, toolTip = "Returns you to the previous category."},
                 new ButtonInfo { buttonText = "Info Screen", method = Settings.Debug, enableMethod = Settings.ShowDebug, disableMethod = Settings.HideDebug, toolTip = "Shows game and modding related information."},
-                new ButtonInfo { buttonText = "Donate Button", method =() => { NotificationManager.ClearAllNotifications(); acceptedDonations = true; File.WriteAllText($"{PluginInfo.BaseDirectory}/iiMenu_HideDonationButton.txt", "true"); Prompt("I've spent nearly two years building this menu. Your Patreon support helps me keep it growing, want to check it out?", () => Process.Start("https://patreon.com/iiDk")); }, isTogglable = false, toolTip = "An advertisement for my Patreon." },
+                //new ButtonInfo { buttonText = "Donate Button", method =() => { NotificationManager.ClearAllNotifications(); acceptedDonations = true; File.WriteAllText($"{PluginInfo.BaseDirectory}/Seralyth_HideDonationButton.txt", "true"); Prompt($"Join our discord and support us! ", () => Process.Start("https://patreon.com/iiDk")); }, isTogglable = false, toolTip = "An advertisement for my Patreon." },
                 new ButtonInfo { buttonText = "Update Button", method =() => UpdatePrompt(), isTogglable = false, toolTip = "Prompts you to update the menu." },
 
                 new ButtonInfo { buttonText = "Accept Prompt", method =() => { NotificationManager.ClearAllNotifications(); if (inTextInput) Settings.DestroyKeyboard(); CurrentPrompt.AcceptAction?.Invoke(); Settings.StopCurrentPrompt(); }, isTogglable = false},

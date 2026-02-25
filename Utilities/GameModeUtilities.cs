@@ -1,9 +1,9 @@
 ﻿/*
- * ii's Stupid Menu  Utilities/GameModeUtilities.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Utilities/GameModeUtilities.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@ using Photon.Pun;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace iiMenu.Utilities
+namespace Seralyth.Utilities
 {
     public class GameModeUtilities
     {

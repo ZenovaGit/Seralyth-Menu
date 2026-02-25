@@ -9,16 +9,16 @@ Thank you guys for 2 years, it's been a pleasure <3
 ---
 
 <p align="center">
-	<a href="https://github.com/iiDk-the-actual/iis.Stupid.Menu/releases"><img src="https://img.shields.io/github/v/release/iiDk-the-actual/iis.Stupid.Menu?label=version&style=for-the-badge"></a>
-	<a href="https://github.com/iiDk-the-actual/iis.Stupid.Menu/releases/latest"><img src="https://img.shields.io/github/downloads/iiDk-the-actual/iis.Stupid.Menu/latest/iis_Stupid_Menu.dll?style=for-the-badge"></a>
+	<a href="https://github.com/Seralyth/Seralyth-Menu/releases"><img src="https://img.shields.io/github/v/release/iiDk-the-actual/iis.Stupid.Menu?label=version&style=for-the-badge"></a>
+	<a href="https://github.com/Seralyth/Seralyth-Menu/releases/latest"><img src="https://img.shields.io/github/downloads/iiDk-the-actual/iis.Stupid.Menu/latest/iis_Stupid_Menu.dll?style=for-the-badge"></a>
 	<a href="https://discord.gg/iidk"><img src="https://img.shields.io/discord/1170093288557129748?label=discord&style=for-the-badge&color=blueviolet"></a>
 </p>
 
 ---
 
-# <img src="Resources/GitHub/cone-emoji.png" height=26px> ii's Stupid Menu  
+# <img src="Resources/GitHub/cone-emoji.png" height=26px> Seralyth Menu  
 
-ii's Stupid Menu is a **feature-packed** mod menu for Gorilla Tag, built by me, [**iiDk**](https://github.com/iiDk-the-actual). Whether you just want mods, are a developer, or anything inbetween, this menu has you covered. Designed to be **as useful as possible**, it includes a variety of features and options that let you customize your modding experience to your heart’s content.  
+Seralyth Menu is a **feature-packed** mod menu for Gorilla Tag, built by me, [**iiDk**](https://github.com/iiDk-the-actual). Whether you just want mods, are a developer, or anything inbetween, this menu has you covered. Designed to be **as useful as possible**, it includes a variety of features and options that let you customize your modding experience to your heart’s content.  
 
 > Why settle for boring when you can have *stupidly* good?  
 
@@ -54,13 +54,13 @@ Let's bring back the collaboration of modding. No paywalls, no secrets, no malwa
 <details>
   <summary><b>💾 Installation</b></summary>
 	
-1. **Download** the latest release **[here](https://github.com/iiDk-the-actual/iis.Stupid.Menu/releases/latest)**
+1. **Download** the latest release **[here](https://github.com/Seralyth/Seralyth-Menu/releases/latest)**
 2. **Drag & Drop** `iis_Stupid_Menu.dll` into your plugins folder  
 3. **Launch** Gorilla Tag and enjoy!
 
 **🧱 From Source Code (for developers!)**
 
-1. Download the source code **[here](https://github.com/iiDk-the-actual/iis.Stupid.Menu/releases/latest)**
+1. Download the source code **[here](https://github.com/Seralyth/Seralyth-Menu/releases/latest)**
 2. Edit `Directory.Build.props` and update `<GamePath>` if your Gorilla Tag is in a custom spot
 3. Build the project with `Ctrl + Shift + B`<Br>
 ✅ The DLL will automatically go into your Gorilla Tag plugins folder
@@ -140,11 +140,11 @@ If you wish to support me, here are some of the ways you can!
 > Menu connects to wss://iidk.online for friend system and administrative purposes.<br>
 > The donate, search, star and speak symbols are made by [Icons8](https://icons8.com).
 
-> ii's Stupid Menu  README.md<br>
-> A mod menu for Gorilla Tag with over 1000+ mods
+> Seralyth Menu  README.md<br>
+> A community driven mod menu for Gorilla Tag with over 1000+ mods
 >
-> Copyright (C) 2026  Goldentrophy Software
-> https://github.com/iiDk-the-actual/iis.Stupid.Menu
+> Copyright (C) 2026  Seralyth Software
+> https://github.com/Seralyth/Seralyth-Menu
 > 
 > This program is free software: you can redistribute it and/or modify
 > it under the terms of the GNU General Public License as published by

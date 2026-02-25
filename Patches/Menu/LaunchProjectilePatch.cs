@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Patches/Menu/LaunchProjectilePatch.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Patches/Menu/LaunchProjectilePatch.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,11 +20,11 @@
  */
 
 using HarmonyLib;
-using iiMenu.Extensions;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.AssetUtilities;
+using Seralyth.Extensions;
+using static Seralyth.Menu.Main;
+using static Seralyth.Utilities.AssetUtilities;
 
-namespace iiMenu.Patches.Menu
+namespace Seralyth.Patches.Menu
 {
     [HarmonyPatch(typeof(ProjectileWeapon), nameof(ProjectileWeapon.LaunchProjectile))]
     public class LaunchProjectilePatch

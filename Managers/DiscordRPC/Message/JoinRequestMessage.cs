@@ -1,6 +1,6 @@
 ﻿using Valve.Newtonsoft.Json;
 
-namespace iiMenu.Managers.DiscordRPC.Message
+namespace Seralyth.Managers.DiscordRPC.Message
 {
 	/// <summary>
 	/// Called when some other person has requested access to this game. C -> D -> C.

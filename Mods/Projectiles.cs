@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Mods/Projectiles.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Mods/Projectiles.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,10 +22,10 @@
 using ExitGames.Client.Photon;
 using GorillaExtensions;
 using GorillaLocomotion;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Patches.Menu;
+using Seralyth.Extensions;
+using Seralyth.Managers;
+using Seralyth.Menu;
+using Seralyth.Patches.Menu;
 using Photon.Pun;
 using Photon.Realtime;
 using System;
@@ -34,13 +34,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static iiMenu.Extensions.VRRigExtensions;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.RandomUtilities;
-using static iiMenu.Utilities.RigUtilities;
+using static Seralyth.Extensions.VRRigExtensions;
+using static Seralyth.Menu.Main;
+using static Seralyth.Utilities.RandomUtilities;
+using static Seralyth.Utilities.RigUtilities;
 using Random = UnityEngine.Random;
 
-namespace iiMenu.Mods
+namespace Seralyth.Mods
 {
     public static class Projectiles
     {

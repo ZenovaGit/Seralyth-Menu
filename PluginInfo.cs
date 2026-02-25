@@ -1,9 +1,9 @@
 ﻿/*
- * ii's Stupid Menu  PluginInfo.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  PluginInfo.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,21 +19,20 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace iiMenu
+namespace Seralyth
 {
     public class PluginInfo
     {
-        public const string GUID = "org.iidk.gorillatag.iimenu";
-        public const string Name = "ii's Stupid Menu";
-        public const string Description = "Created by @crimsoncauldron with love <3";
+        public const string GUID = "org.kingofnetflix.gorillatag.seralythmenu";
+        public const string Name = "Seralyth Menu";
+        public const string Description = "Created by kingofnetflix";
         public const string BuildTimestamp = "2026-02-23T03:36:03Z";
         public const string Version = "8.3.0";
 
-        public const string BaseDirectory = "iisStupidMenu";
-        public const string ClientResourcePath = "iiMenu.Resources.Client";
-        public const string ServerResourcePath = "https://raw.githubusercontent.com/iiDk-the-actual/iis.Stupid.Menu/master/Resources/Server";
-        public const string ServerAPI = "https://iidk.online"; // Server now closed source due to bad actors :( For any questions, please make an issue on the GitHub repository.
-        
+        public const string BaseDirectory = "SeralythMenu";
+        public const string ClientResourcePath = "Seralyth.Resources.Client";
+        public const string ServerResourcePath = "https://raw.githubusercontent.com/Seralyth/Seralyth-Menu/master/Resources/Server";
+        public const string ServerAPI = "https://menu.seralyth.software";        
         public const string Logo = @"••╹   ┏┓     • ┓  ┳┳┓      
 ┓┓ ┏  ┗┓╋┓┏┏┓┓┏┫  ┃┃┃┏┓┏┓┓┏
 ┗┗ ┛  ┗┛┗┗┻┣┛┗┗┻  ┛ ┗┗ ┛┗┗┻

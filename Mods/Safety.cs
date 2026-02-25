@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Mods/Safety.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Mods/Safety.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,12 +23,12 @@ using ExitGames.Client.Photon;
 using GorillaLocomotion;
 using GorillaNetworking;
 using GorillaTagScripts;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Patches.Menu;
-using iiMenu.Patches.Safety;
-using iiMenu.Utilities;
+using Seralyth.Extensions;
+using Seralyth.Managers;
+using Seralyth.Menu;
+using Seralyth.Patches.Menu;
+using Seralyth.Patches.Safety;
+using Seralyth.Utilities;
 using Photon.Pun;
 using Photon.Realtime;
 using Photon.Voice.Unity;
@@ -37,11 +37,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.RigUtilities;
+using static Seralyth.Menu.Main;
+using static Seralyth.Utilities.RigUtilities;
 using Random = UnityEngine.Random;
 
-namespace iiMenu.Mods
+namespace Seralyth.Mods
 {
     public static class Safety
     {
@@ -462,7 +462,7 @@ namespace iiMenu.Mods
                         catch { LogManager.Log("Failed to log player"); }
 
                         text += "\n====================================\n";
-                        text += "Text file generated with ii's Stupid Menu";
+                        text += "Text file generated with Seralyth Menu";
                         string fileName = $"{PluginInfo.BaseDirectory}/" + player.NickName + " - Anti Moderator.txt";
 
                         File.WriteAllText(fileName, text);
@@ -506,7 +506,7 @@ namespace iiMenu.Mods
                         catch { LogManager.Log("Failed to log player"); }
 
                         text += "\n====================================\n";
-                        text += "Text file generated with ii's Stupid Menu";
+                        text += "Text file generated with Seralyth Menu";
                         string fileName = $"{PluginInfo.BaseDirectory}/" + player.NickName + " - Anti Content Creator.txt";
 
                         File.WriteAllText(fileName, text);

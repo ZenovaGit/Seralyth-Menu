@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Menu/Main.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Menu/Main.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,14 +26,14 @@ using GorillaLocomotion;
 using GorillaNetworking;
 using GorillaTagScripts;
 using HarmonyLib;
-using iiMenu.Classes.Menu;
-using iiMenu.Classes.Mods;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Mods;
-using iiMenu.Patches;
-using iiMenu.Patches.Menu;
-using iiMenu.Utilities;
+using Seralyth.Classes.Menu;
+using Seralyth.Classes.Mods;
+using Seralyth.Extensions;
+using Seralyth.Managers;
+using Seralyth.Mods;
+using Seralyth.Patches;
+using Seralyth.Patches.Menu;
+using Seralyth.Utilities;
 using Photon.Pun;
 using Photon.Realtime;
 using System;
@@ -58,30 +58,17 @@ using UnityEngine.XR;
 using Valve.Newtonsoft.Json;
 using Valve.VR;
 using WebSocketSharp;
-using static iiMenu.Utilities.AssetUtilities;
-using static iiMenu.Utilities.FileUtilities;
-using static iiMenu.Utilities.RandomUtilities;
-using ButtonCollider = iiMenu.Classes.Menu.ButtonCollider;
+using static Seralyth.Utilities.AssetUtilities;
+using static Seralyth.Utilities.FileUtilities;
+using static Seralyth.Utilities.RandomUtilities;
+using ButtonCollider = Seralyth.Classes.Menu.ButtonCollider;
 using CommonUsages = UnityEngine.XR.CommonUsages;
-using Console = iiMenu.Classes.Menu.Console;
+using Console = Seralyth.Classes.Menu.Console;
 using JoinType = GorillaNetworking.JoinType;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
-/*
- * ii's Stupid Menu, written by @goldentrophy
- * Any comments are developer comments I wrote
- * Most comments are used to find certain parts of code faster with Ctrl + F
- * Feel free to read them if you want
- *
- * ii's Stupid Menu falls under the GPL-3.0 license
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
- *
- * If you want to support my, check out my Patreon: https://patreon.com/iiDk
- * Any support is appreciated, and it helps me make more free content for you all
- */
-
-namespace iiMenu.Menu
+namespace Seralyth.Menu
 {
     [HarmonyPatch(typeof(GTPlayer), nameof(GTPlayer.LateUpdate))]
     public class Main : MonoBehaviour // Do not get rid of this. I don't know why, the entire class kills itself.
@@ -105,8 +92,8 @@ namespace iiMenu.Menu
 
             if (Plugin.FirstLaunch)
                 Prompt("It seems like this is your first time using the menu. Would you like to watch a quick tutorial to get to know how to use it?", Settings.ShowTutorial);
-            else
-                acceptedDonations = File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_HideDonationButton.txt");
+            //else
+            //    acceptedDonations = File.Exists($"{PluginInfo.BaseDirectory}/Seralyth_HideDonationButton.txt");
 
             NetworkSystem.Instance.OnJoinedRoomEvent += OnJoinRoom;
             NetworkSystem.Instance.OnReturnedToSinglePlayer += OnLeaveRoom;
@@ -188,7 +175,7 @@ namespace iiMenu.Menu
             }
 
             loadPreferencesTime = Time.time;
-            if (File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_Preferences.txt"))
+            if (File.Exists($"{PluginInfo.BaseDirectory}/Seralyth_Preferences.txt"))
             {
                 try
                 {
@@ -533,7 +520,7 @@ namespace iiMenu.Menu
 
                 if (animatedTitle && title != null)
                 {
-                    string targetString = doCustomName ? NoRichtextTags(customMenuName) : "ii's Stupid Menu";
+                    string targetString = doCustomName ? NoRichtextTags(customMenuName) : "Seralyth Menu";
                     int length = (int)Mathf.PingPong(Time.time / 0.25f, targetString.Length + 1);
                     title.text = length > 0 ? targetString[..length] : "";
                 }
@@ -2074,7 +2061,7 @@ namespace iiMenu.Menu
             {
                 if (buttonSpriteSheet != null) return buttonSpriteSheet;
                 buttonSpriteSheet = ScriptableObject.CreateInstance<TMP_SpriteAsset>();
-                buttonSpriteSheet.name = "iiMenu_SpriteSheet";
+                buttonSpriteSheet.name = "Seralyth_SpriteSheet";
 
                 var textureList = new List<Texture2D>();
                 var spriteDataList = new List<(string name, int index)>();
@@ -2584,7 +2571,7 @@ namespace iiMenu.Menu
                         case 63:
                             if (videoPlayer == null)
                             {
-                                videoPlayer = new GameObject("iiMenu_VideoPlayer").AddComponent<VideoPlayer>();
+                                videoPlayer = new GameObject("Seralyth_VideoPlayer").AddComponent<VideoPlayer>();
                                 videoPlayer.playOnAwake = true;
                                 videoPlayer.isLooping = true;
                                 videoPlayer.url = $"{PluginInfo.ServerResourcePath}/Videos/Themes/badapple.mp4";
@@ -2645,7 +2632,7 @@ namespace iiMenu.Menu
                     }
                 }.AddComponent<TextMeshPro>();
                 title.font = activeFont;
-                title.text = translate ? "ii's Stupid Menu" : "ii's <b>Stupid</b> Menu";
+                title.text = translate ? "Seralyth Menu" : "ii's <b>Stupid</b> Menu";
 
                 if (doCustomName)
                     title.text = customMenuName;
@@ -2687,7 +2674,7 @@ namespace iiMenu.Menu
 
                 if (animatedTitle)
                 {
-                    string targetString = doCustomName ? NoRichtextTags(customMenuName) : "ii's Stupid Menu";
+                    string targetString = doCustomName ? NoRichtextTags(customMenuName) : "Seralyth Menu";
                     int length = (int)Mathf.PingPong(Time.time / 0.25f, targetString.Length);
                     title.text = length > 0 ? targetString[..length] : "";
                 }
@@ -2849,9 +2836,7 @@ namespace iiMenu.Menu
                 AddDebugButton();
             else
             {
-                if (!acceptedDonations)
-                    AddDonateButton();
-                else if (ServerData.OutdatedVersion)
+                if (ServerData.OutdatedVersion)
                     AddUpdateButton();
             }
 
@@ -3631,7 +3616,7 @@ namespace iiMenu.Menu
                     case "webm":
                     case "mov":
                         {
-                            promptVideoPlayer = new GameObject("iiMenu_PromptVideoPlayer").AddComponent<VideoPlayer>();
+                            promptVideoPlayer = new GameObject("Seralyth_PromptVideoPlayer").AddComponent<VideoPlayer>();
                             promptVideoPlayer.playOnAwake = true;
                             promptVideoPlayer.isLooping = true;
                             promptVideoPlayer.url = promptImageUrl;
@@ -4402,7 +4387,7 @@ namespace iiMenu.Menu
             if (disableGunLine) return (Ray, GunPointer);
             if (GunLine == null)
             {
-                GameObject line = new GameObject("iiMenu_GunLine");
+                GameObject line = new GameObject("Seralyth_GunLine");
                 GunLine = line.AddComponent<LineRenderer>();
             }
 
@@ -6949,7 +6934,7 @@ jgs \_   _/ |Oo\
         public static bool fpsCountTimed;
         public static bool fpsCountAverage;
         public static bool ftCount;
-        public static bool acceptedDonations;
+        //public static bool acceptedDonations;
         public static float lastDeltaTime = 1f;
         public static TextMeshPro keyboardInputObject;
         public static TextMeshPro title;
@@ -7007,7 +6992,7 @@ jgs \_   _/ |Oo\
         public static readonly List<string> skipButtons = new List<string> { };
         public static bool translate;
 
-        public static string serverLink = "https://discord.gg/iidk";
+        public static string serverLink = "https://discord.gg/seralyth";
 
         public static int arrowType;
         public static readonly string[][] arrowTypes = {

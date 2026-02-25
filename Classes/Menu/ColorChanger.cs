@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Classes/Menu/ColorChanger.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Classes/Menu/ColorChanger.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,10 +20,10 @@
  */
 
 using GorillaExtensions;
-using iiMenu.Menu;
+using Seralyth.Menu;
 using UnityEngine;
 
-namespace iiMenu.Classes.Menu
+namespace Seralyth.Classes.Menu
 {
     public class ColorChanger : MonoBehaviour
     {

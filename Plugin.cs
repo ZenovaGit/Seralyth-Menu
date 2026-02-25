@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Plugin.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Plugin.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,18 +21,18 @@
 
 using BepInEx;
 using BepInEx.Logging;
-using iiMenu.Classes.Menu;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Patches;
-using iiMenu.Patches.Menu;
+using Seralyth.Classes.Menu;
+using Seralyth.Managers;
+using Seralyth.Menu;
+using Seralyth.Patches;
+using Seralyth.Patches.Menu;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using UnityEngine;
 using Console = System.Console;
 
-namespace iiMenu
+namespace Seralyth
 {
     [Description(PluginInfo.Description)]
     [BepInPlugin(PluginInfo.GUID, PluginInfo.Name, PluginInfo.Version)]
@@ -45,7 +45,7 @@ namespace iiMenu
         private void Awake()
         {
             // Set console title
-            Console.Title = $"ii's Stupid Menu // Build {PluginInfo.Version}";
+            Console.Title = $"Seralyth Menu // Build {PluginInfo.Version}";
             instance = this;
 
             string logoLines = PluginInfo.Logo.Split(@"
@@ -54,14 +54,14 @@ namespace iiMenu
 
             LogManager.Log($@"
 {logoLines}
-    ii's Stupid Menu  {(PluginInfo.BetaBuild ? "Beta " : "Build")} {PluginInfo.Version}
+    Seralyth Menu  {(PluginInfo.BetaBuild ? "Beta " : "Build")} {PluginInfo.Version}
     Compiled {PluginInfo.BuildTimestamp}
     
     This program comes with ABSOLUTELY NO WARRANTY;
-    for details see `https://github.com/iiDk-the-actual/iis.Stupid.Menu/GPL/WARRANTY`
+    for details see `https://github.com/Seralyth/Seralyth-Menu/GPL/WARRANTY`
     
     This is free software, and you are welcome to redistribute it under certain conditions;
-    see `https://github.com/iiDk-the-actual/iis.Stupid.Menu/GPL/REDISTRIBUTION` for details.
+    see `https://github.com/Seralyth/Seralyth-Menu/GPL/REDISTRIBUTION` for details.
 ");
 
             FirstLaunch = !Directory.Exists(PluginInfo.BaseDirectory);
@@ -90,13 +90,13 @@ namespace iiMenu
             PatchHandler.PatchAll(true);
 
             // Ugily hard-coded but works so well
-            if (File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_Preferences.txt"))
+            if (File.Exists($"{PluginInfo.BaseDirectory}/Seralyth_Preferences.txt"))
             {
-                if (File.ReadAllLines($"{PluginInfo.BaseDirectory}/iiMenu_Preferences.txt")[0].Split(";;").Contains("Accept TOS"))
+                if (File.ReadAllLines($"{PluginInfo.BaseDirectory}/Seralyth_Preferences.txt")[0].Split(";;").Contains("Accept TOS"))
                     TOSPatches.enabled = true;
             }
 
-            if (File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_DisableTelemetry.txt"))
+            if (File.Exists($"{PluginInfo.BaseDirectory}/Seralyth_DisableTelemetry.txt"))
                 ServerData.DisableTelemetry = true;
             
             GorillaTagger.OnPlayerSpawned(LoadMenu);
@@ -109,7 +109,7 @@ namespace iiMenu
         {
             PatchHandler.PatchAll();
 
-            GameObject Loader = new GameObject("iiMenu_Loader");
+            GameObject Loader = new GameObject("Seralyth_Loader");
             Loader.AddComponent<CoroutineManager>();
             Loader.AddComponent<NotificationManager>();
             Loader.AddComponent<CustomBoardManager>();
@@ -123,15 +123,15 @@ namespace iiMenu
         // Don't merge these methods, it just doesn't work
         public static void Inject()
         {
-            GameObject iiMenu = new GameObject("iiMenu");
-            iiMenu.AddComponent<Plugin>();
+            GameObject Seralyth = new GameObject("Seralyth");
+            Seralyth.AddComponent<Plugin>();
         }
 
         public static void InjectDontDestroy()
         {
-            GameObject iiMenu = new GameObject("iiMenu");
-            iiMenu.AddComponent<Plugin>();
-            DontDestroyOnLoad(iiMenu);
+            GameObject Seralyth = new GameObject("Seralyth");
+            Seralyth.AddComponent<Plugin>();
+            DontDestroyOnLoad(Seralyth);
         }
     }
 }

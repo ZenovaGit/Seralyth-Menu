@@ -1,9 +1,9 @@
 ﻿/*
- * ii's Stupid Menu  Managers/CustomBoardManager.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Managers/CustomBoardManager.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,16 +20,16 @@
  */
 
 using GorillaNetworking;
-using iiMenu.Extensions;
+using Seralyth.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static iiMenu.Menu.Main;
+using static Seralyth.Menu.Main;
 
-namespace iiMenu.Managers
+namespace Seralyth.Managers
 {
     public class CustomBoardManager : MonoBehaviour
     {
@@ -170,11 +170,11 @@ namespace iiMenu.Managers
         public const int StumpLeaderboardIndex = 3;
         public const int ForestLeaderboardIndex = 2;
 
-        public static string motdTemplate = "You are using build {0}. This menu was created by iiDk (@crimsoncauldron) on Discord. " +
+        public static string motdTemplate = "You are using build {0}. This menu was created by Seralyth on GitHub." +
         "This menu is completely free and open sourced, if you paid for this menu you have been scammed. " +
         "There are a total of <b>{1}</b> mods on this menu. " +
-        "<color=red>I, iiDk, am not responsible for any bans using this menu.</color> " +
-        "If you get banned while using this, it's your responsibility.\n\nCurrent menu status: <b>Loading...</b>\nMade with <3 by iiDk, kingofnetflix, and others\n\n<alpha=128>{2} {0} {3}<alpha=255>";
+        "<color=red>Seralyth is not responsible for any bans using this menu.</color> " +
+        "If you get banned while using this, it's your responsibility.\n\nCurrent menu status: <b>Loading...</b>\nMade with <3 by the community.\n\n<alpha=128>{2} {0} {3}<alpha=255>";
 
         public Material forestMaterial;
         public Material stumpMaterial;

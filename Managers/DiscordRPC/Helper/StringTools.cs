@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace iiMenu.Managers.DiscordRPC.Helper
+namespace Seralyth.Managers.DiscordRPC.Helper
 {
 	/// <summary>
 	/// Collectin of helpful string extensions

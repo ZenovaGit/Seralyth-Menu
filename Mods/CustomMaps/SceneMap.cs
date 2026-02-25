@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Mods/CustomMaps/SceneMap.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Mods/CustomMaps/SceneMap.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
  */
 
 
-namespace iiMenu.Mods.CustomMaps
+namespace Seralyth.Mods.CustomMaps
 {
     public class SceneMap
     {

@@ -1,9 +1,9 @@
 ﻿/*
- * ii's Stupid Menu  Mods/Movement.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Mods/Movement.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,13 +25,13 @@ using GorillaExtensions;
 using GorillaLocomotion;
 using GorillaLocomotion.Climbing;
 using GorillaLocomotion.Swimming;
-using iiMenu.Classes.Menu;
-using iiMenu.Classes.Mods;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Patches.Menu;
-using iiMenu.Utilities;
+using Seralyth.Classes.Menu;
+using Seralyth.Classes.Mods;
+using Seralyth.Extensions;
+using Seralyth.Managers;
+using Seralyth.Menu;
+using Seralyth.Patches.Menu;
+using Seralyth.Utilities;
 using Photon.Pun;
 using Photon.Realtime;
 using System;
@@ -47,14 +47,14 @@ using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using UnityEngine.XR;
 using Valve.Newtonsoft.Json.Linq;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.AssetUtilities;
-using static iiMenu.Utilities.RandomUtilities;
-using static iiMenu.Utilities.RigUtilities;
+using static Seralyth.Menu.Main;
+using static Seralyth.Utilities.AssetUtilities;
+using static Seralyth.Utilities.RandomUtilities;
+using static Seralyth.Utilities.RigUtilities;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
-namespace iiMenu.Mods
+namespace Seralyth.Mods
 {
     public static class Movement
     {

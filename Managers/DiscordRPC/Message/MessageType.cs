@@ -1,5 +1,5 @@
 ﻿
-namespace iiMenu.Managers.DiscordRPC.Message
+namespace Seralyth.Managers.DiscordRPC.Message
 {
 	/// <summary>
 	/// Type of message.

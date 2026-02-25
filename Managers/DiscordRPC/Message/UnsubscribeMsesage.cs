@@ -1,6 +1,6 @@
-﻿using iiMenu.Managers.DiscordRPC.RPC.Payload;
+﻿using Seralyth.Managers.DiscordRPC.RPC.Payload;
 
-namespace iiMenu.Managers.DiscordRPC.Message
+namespace Seralyth.Managers.DiscordRPC.Message
 {
 	/// <summary>
 	/// Called as validation of a subscribe

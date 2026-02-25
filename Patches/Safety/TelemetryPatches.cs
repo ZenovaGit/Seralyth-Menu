@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Patches/Safety/TelemetryPatches.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Patches/Safety/TelemetryPatches.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,9 +25,9 @@ using Liv.Lck.Telemetry;
 using PlayFab;
 using PlayFab.EventsModels;
 using System.Collections.Generic;
-using static iiMenu.Patches.PatchHandler;
+using static Seralyth.Patches.PatchHandler;
 
-namespace iiMenu.Patches.Safety
+namespace Seralyth.Patches.Safety
 {
     // Gorilla Tag's one weakness -- tracking data to get players banned. This is how they did it over the years.
     public class TelemetryPatches

@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Menu/UI.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Menu/UI.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,9 +21,9 @@
 
 using BepInEx;
 using GorillaNetworking;
-using iiMenu.Classes.Menu;
-using iiMenu.Extensions;
-using iiMenu.Managers;
+using Seralyth.Classes.Menu;
+using Seralyth.Extensions;
+using Seralyth.Managers;
 using Photon.Pun;
 using System.Collections.Generic;
 using System.IO;
@@ -32,10 +32,10 @@ using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.AssetUtilities;
+using static Seralyth.Menu.Main;
+using static Seralyth.Utilities.AssetUtilities;
 
-namespace iiMenu.Menu
+namespace Seralyth.Menu
 {
     public class UI : MonoBehaviour
     {
@@ -322,7 +322,7 @@ namespace iiMenu.Menu
                 uiPrefab.SetActive(false);
         }
 
-        private readonly string hideGUIPath = $"{PluginInfo.BaseDirectory}/iiMenu_HideGUI.txt";
+        private readonly string hideGUIPath = $"{PluginInfo.BaseDirectory}/Seralyth_HideGUI.txt";
         private void ToggleGUI()
         {
             isOpen = !isOpen;
@@ -334,7 +334,7 @@ namespace iiMenu.Menu
             else
             {
                 if (!File.Exists(hideGUIPath))
-                    File.WriteAllText(hideGUIPath, "Text file generated with ii's Stupid Menu");
+                    File.WriteAllText(hideGUIPath, "Text file generated with Seralyth Menu");
             }
 
             GameObject closeMessage = uiPrefab.transform.Find("Canvas")?.Find("HideMessage")?.gameObject;

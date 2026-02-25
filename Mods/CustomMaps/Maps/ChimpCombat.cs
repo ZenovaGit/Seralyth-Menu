@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Mods/CustomMaps/Maps/ChimpCombat.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Mods/CustomMaps/Maps/ChimpCombat.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,19 +20,19 @@
  */
 
 using ExitGames.Client.Photon;
-using iiMenu.Classes.Menu;
-using iiMenu.Managers;
+using Seralyth.Classes.Menu;
+using Seralyth.Managers;
 using Photon.Pun;
 using Photon.Realtime;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using static iiMenu.Extensions.VRRigExtensions;
-using static iiMenu.Menu.Main;
-using static iiMenu.Mods.CustomMaps.Manager;
-using static iiMenu.Utilities.RigUtilities;
+using static Seralyth.Extensions.VRRigExtensions;
+using static Seralyth.Menu.Main;
+using static Seralyth.Mods.CustomMaps.Manager;
+using static Seralyth.Utilities.RigUtilities;
 
-namespace iiMenu.Mods.CustomMaps.Maps
+namespace Seralyth.Mods.CustomMaps.Maps
 {
     public class ChimpCombat : CustomMap
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace iiMenu.Managers.DiscordRPC.Converters
+namespace Seralyth.Managers.DiscordRPC.Converters
 {
 	internal class EnumValueAttribute : Attribute
 	{

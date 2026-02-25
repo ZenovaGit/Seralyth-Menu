@@ -1,9 +1,9 @@
-﻿using iiMenu.Managers.DiscordRPC.Exceptions;
+﻿using Seralyth.Managers.DiscordRPC.Exceptions;
 using System;
 using System.Text;
 using Valve.Newtonsoft.Json;
 
-namespace iiMenu.Managers.DiscordRPC
+namespace Seralyth.Managers.DiscordRPC
 {
 	/// <summary>
 	/// A Rich Presence button.

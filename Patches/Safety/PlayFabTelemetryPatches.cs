@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Patches/Safety/PlayFabTelemetryPatches.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Patches/Safety/PlayFabTelemetryPatches.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,11 +25,11 @@ using PlayFab.ClientModels;
 using PlayFab.Internal;
 using System;
 using System.Collections.Generic;
-using static iiMenu.Utilities.RandomUtilities;
+using static Seralyth.Utilities.RandomUtilities;
 using Random = UnityEngine.Random;
-using static iiMenu.Patches.PatchHandler;
+using static Seralyth.Patches.PatchHandler;
 
-namespace iiMenu.Patches.Safety
+namespace Seralyth.Patches.Safety
 {
     public class PlayFabTelemetryPatches
     {

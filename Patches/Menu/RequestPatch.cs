@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Patches/Menu/RequestPatch.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Patches/Menu/RequestPatch.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,15 +21,15 @@
 
 using GorillaNetworking;
 using HarmonyLib;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Mods;
+using Seralyth.Managers;
+using Seralyth.Menu;
+using Seralyth.Mods;
 using Photon.Pun;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
 
-namespace iiMenu.Patches.Menu
+namespace Seralyth.Patches.Menu
 {
     [HarmonyPatch(typeof(VRRig), nameof(VRRig.RequestCosmetics))]
     public class RequestPatch

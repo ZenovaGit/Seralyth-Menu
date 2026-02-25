@@ -1,9 +1,9 @@
 ﻿/*
- * ii's Stupid Menu  Extensions/VRRigExtensions.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Extensions/VRRigExtensions.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,17 +20,17 @@
  */
 
 using GorillaGameModes;
-using iiMenu.Menu;
-using iiMenu.Utilities;
+using Seralyth.Menu;
+using Seralyth.Utilities;
 using Photon.Pun;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.GameModeUtilities;
+using static Seralyth.Menu.Main;
+using static Seralyth.Utilities.GameModeUtilities;
 
-namespace iiMenu.Extensions
+namespace Seralyth.Extensions
 {
     public static class VRRigExtensions
     {

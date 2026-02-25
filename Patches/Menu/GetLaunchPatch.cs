@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Patches/Menu/GetLaunchPatch.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Patches/Menu/GetLaunchPatch.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,11 +23,11 @@ using HarmonyLib;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.GameModeUtilities;
-using static iiMenu.Utilities.RigUtilities;
+using static Seralyth.Menu.Main;
+using static Seralyth.Utilities.GameModeUtilities;
+using static Seralyth.Utilities.RigUtilities;
 
-namespace iiMenu.Patches.Menu
+namespace Seralyth.Patches.Menu
 {
     [HarmonyPatch(typeof(Slingshot), nameof(Slingshot.GetLaunchVelocity))]
     public class GetLaunchPatch

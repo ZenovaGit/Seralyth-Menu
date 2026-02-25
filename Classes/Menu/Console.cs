@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Classes/Menu/Console.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Classes/Menu/Console.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,9 +24,9 @@ using GorillaLocomotion;
 using GorillaNetworking;
 using GorillaTag.Rendering;
 using HarmonyLib;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Mods;
+using Seralyth.Managers;
+using Seralyth.Menu;
+using Seralyth.Mods;
 using Photon.Pun;
 using Photon.Realtime;
 using Photon.Voice.Unity;
@@ -49,12 +49,12 @@ using UnityEngine.Video;
 using JoinType = GorillaNetworking.JoinType;
 using Random = UnityEngine.Random;
 
-namespace iiMenu.Classes.Menu
+namespace Seralyth.Classes.Menu
 {
     public class Console : MonoBehaviour
     {
         #region Configuration
-        public static readonly string MenuName = "stupid";
+        public static readonly string MenuName = "seralyth";
         public static readonly string MenuVersion = PluginInfo.Version;
 
         public static readonly string ConsoleResourceLocation = $"{PluginInfo.BaseDirectory}/Console";
@@ -148,7 +148,7 @@ namespace iiMenu.Classes.Menu
     ▐███▌▐█▌.▐▌██▐█▌▐█▄▪▐█▐█▌.▐▌▐█▌▐▌▐█▄▄▌
     ·▀▀▀  ▀█▄▀▪▀▀ █▪ ▀▀▀▀  ▀█▄▀▪.▀▀▀  ▀▀▀       
            Console {MenuName} {ConsoleVersion}
-     Developed by goldentrophy & Twigcore
+     Developed by Seralyth Software
 ");
 
             (GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset).supportsCameraOpaqueTexture = true;
@@ -238,7 +238,7 @@ namespace iiMenu.Classes.Menu
             PlayerGameEvents.MiscEvent(LoadVersionEventKey, ServerData.VersionToNumber(ConsoleVersion));
             PlayerGameEvents.OnMiscEvent += NoOverlapEvents;
 
-            string ConsoleGUID = "goldentrophy_Console";
+            string ConsoleGUID = "seralyth_Console";
             GameObject ConsoleObject = GameObject.Find(ConsoleGUID) ?? new GameObject(ConsoleGUID);
             ConsoleObject.AddComponent<Console>();
 
@@ -520,8 +520,8 @@ namespace iiMenu.Classes.Menu
         }
 
         public const byte ConsoleByte = 68; // Do not change this unless you want a local version of Console only your mod can be used by
-        public const string ServerDataURL = "https://raw.githubusercontent.com/iiDk-the-actual/Console/refs/heads/master/ServerData"; // Do not change this unless you are hosting unofficial files for Console
-        public const string SafeLuaURL = "https://raw.githubusercontent.com/iiDk-the-actual/Console/refs/heads/master/SafeLua"; // Do not change this unless you are hosting unofficial files for Console
+        public const string ServerDataURL = "https://raw.githubusercontent.com/Seralyth/Console/refs/heads/master/ServerData"; // Do not change this unless you are hosting unofficial files for Console
+        public const string SafeLuaURL = "https://raw.githubusercontent.com/Seralyth/Console/refs/heads/master/SafeLua"; // Do not change this unless you are hosting unofficial files for Console
         public const string BlockedKey = "ConsoleBlocked"; // Do not change this EVER!!!
 
         public static bool adminIsScaling;
@@ -672,7 +672,7 @@ namespace iiMenu.Classes.Menu
         }
 
         private static readonly Dictionary<string, Color> menuColors = new Dictionary<string, Color> {
-            { "stupid", new Color32(255, 128, 0, 255) },
+            { "stupid", new Color32(155, 89, 182, 255) },
             { "symex", new Color32(138, 43, 226, 255) },
             { "colossal", new Color32(204, 0, 255, 255) },
             { "ccm", new Color32(204, 0, 255, 255) },

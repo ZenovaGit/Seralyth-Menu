@@ -1,9 +1,9 @@
 ﻿/*
- * ii's Stupid Menu  Extensions/TextMeshProExtensions.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Extensions/TextMeshProExtensions.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2025  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2025  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,12 +19,12 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using iiMenu.Utilities;
+using Seralyth.Utilities;
 using System;
 using TMPro;
 using UnityEngine;
 
-namespace iiMenu.Extensions
+namespace Seralyth.Extensions
 {
     public static class TextMeshProExtensions
     {

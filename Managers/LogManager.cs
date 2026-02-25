@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Managers/LogManager.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Managers/LogManager.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace iiMenu.Managers
+namespace Seralyth.Managers
 {
     public class LogManager
     {

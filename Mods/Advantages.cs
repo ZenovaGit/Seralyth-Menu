@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Mods/Advantages.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Mods/Advantages.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,21 +22,21 @@
 using ExitGames.Client.Photon;
 using GorillaGameModes;
 using GorillaLocomotion;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Patches.Menu;
+using Seralyth.Extensions;
+using Seralyth.Managers;
+using Seralyth.Menu;
+using Seralyth.Patches.Menu;
 using Photon.Pun;
 using Photon.Realtime;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.GameModeUtilities;
-using static iiMenu.Utilities.RandomUtilities;
-using static iiMenu.Utilities.RigUtilities;
+using static Seralyth.Menu.Main;
+using static Seralyth.Utilities.GameModeUtilities;
+using static Seralyth.Utilities.RandomUtilities;
+using static Seralyth.Utilities.RigUtilities;
 
-namespace iiMenu.Mods
+namespace Seralyth.Mods
 {
     public static class Advantages
     {

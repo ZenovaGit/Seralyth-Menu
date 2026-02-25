@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Patches/Menu/ThrowPatch.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Patches/Menu/ThrowPatch.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,9 +21,9 @@
 
 using HarmonyLib;
 using UnityEngine;
-using static iiMenu.Utilities.RandomUtilities;
+using static Seralyth.Utilities.RandomUtilities;
 
-namespace iiMenu.Patches.Menu
+namespace Seralyth.Patches.Menu
 {
     [HarmonyPatch(typeof(GrowingSnowballThrowable), nameof(GrowingSnowballThrowable.PerformSnowballThrowAuthority))]
     public class ThrowPatch

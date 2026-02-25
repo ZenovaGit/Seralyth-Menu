@@ -1,7 +1,7 @@
-﻿using iiMenu.Managers.DiscordRPC.RPC.Payload;
+﻿using Seralyth.Managers.DiscordRPC.RPC.Payload;
 using Valve.Newtonsoft.Json;
 
-namespace iiMenu.Managers.DiscordRPC.RPC.Commands
+namespace Seralyth.Managers.DiscordRPC.RPC.Commands
 {
 	internal class PresenceCommand : ICommand
 	{

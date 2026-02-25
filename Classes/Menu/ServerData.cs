@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Classes/Menu/ServerData.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Classes/Menu/ServerData.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
  */
 
 using GorillaNetworking;
-using iiMenu.Managers;
-using iiMenu.Menu;
+using Seralyth.Managers;
+using Seralyth.Menu;
 using MonoMod.Utils;
 using Photon.Pun;
 using Photon.Realtime;
@@ -36,7 +36,7 @@ using UnityEngine.Networking;
 using Valve.Newtonsoft.Json;
 using Valve.Newtonsoft.Json.Linq;
 
-namespace iiMenu.Classes.Menu
+namespace Seralyth.Classes.Menu
 {
     public class ServerData : MonoBehaviour
     {
@@ -45,7 +45,7 @@ namespace iiMenu.Classes.Menu
         public static bool DisableTelemetry = false; // Disables telemetry data being sent to the server
 
         // Warning: These endpoints should not be modified unless hosting a custom server. Use with caution.
-        public const string ServerEndpoint = "https://iidk.online";
+        public const string ServerEndpoint = "https://menu.seralyth.software";
         public static readonly string ServerDataEndpoint = $"{ServerEndpoint}/serverdata";
 
         // The dictionary used to assign the admins only seen in your mod.

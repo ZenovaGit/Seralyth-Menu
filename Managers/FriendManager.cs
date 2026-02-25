@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Managers/FriendManager.cs
- * A mod menu for Gorilla Tag with over 1000+ mods
+ * Seralyth Menu  Managers/FriendManager.cs
+ * A community driven mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Seralyth Software
+ * https://github.com/Seralyth/Seralyth-Menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,10 +23,10 @@ using ExitGames.Client.Photon;
 using GorillaExtensions;
 using GorillaLocomotion;
 using GorillaNetworking;
-using iiMenu.Classes.Menu;
-using iiMenu.Menu;
-using iiMenu.Mods;
-using iiMenu.Utilities;
+using Seralyth.Classes.Menu;
+using Seralyth.Menu;
+using Seralyth.Mods;
+using Seralyth.Utilities;
 using Photon.Pun;
 using Photon.Realtime;
 using System;
@@ -45,12 +45,12 @@ using UnityEngine.Networking;
 using UnityEngine.Rendering;
 using Valve.Newtonsoft.Json;
 using Valve.Newtonsoft.Json.Linq;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.AssetUtilities;
-using static iiMenu.Utilities.RigUtilities;
+using static Seralyth.Menu.Main;
+using static Seralyth.Utilities.AssetUtilities;
+using static Seralyth.Utilities.RigUtilities;
 using JoinType = GorillaNetworking.JoinType;
 
-namespace iiMenu.Managers
+namespace Seralyth.Managers
 {
     public class FriendManager : MonoBehaviour
     {
@@ -239,7 +239,7 @@ namespace iiMenu.Managers
                         if (rightJoystickClick)
                         {
                             if (pingObject == null)
-                                pingObject = new GameObject("iiMenu_PingLine");
+                                pingObject = new GameObject("Seralyth_PingLine");
 
                             Color targetColor = VRRig.LocalRig.playerColor;
                             targetColor.a = 0.15f;
@@ -441,7 +441,7 @@ namespace iiMenu.Managers
                         head.transform.localScale = Vector3.one * 0.3f;
                         head.GetComponent<Renderer>().material.color = senderRig.playerColor;
 
-                        GameObject nametag = new GameObject("iiMenu_Nametag");
+                        GameObject nametag = new GameObject("Seralyth_Nametag");
                         nametag.transform.SetParent(head.transform);
                         nametag.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                         nametag.transform.localPosition = new Vector3(0f, 0.8f, 0f);
@@ -1315,7 +1315,7 @@ namespace iiMenu.Managers
 
         public class FriendWebSocket : MonoBehaviour
         {
-            public const string FriendWebsocket = "wss://iidk.online";
+            public const string FriendWebsocket = "wss://menu.seralyth.software";
 
             public ClientWebSocket ws;
             public CancellationTokenSource cts;
