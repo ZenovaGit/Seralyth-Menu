@@ -71,7 +71,7 @@ using Random = UnityEngine.Random;
 namespace Seralyth.Menu
 {
     [HarmonyPatch(typeof(GTPlayer), nameof(GTPlayer.LateUpdate))]
-    public class Main : MonoBehaviour // Do not get rid of this. I don't know why, the entire class kills itself.
+    public class Main : MonoBehaviour // Do not get rid of this. I don't know why, the entire class kills itself. - but ill remove it anyway :wink:
     {
         /// <summary>
         /// Runs on first frame of <see cref="GTPlayer.LateUpdate"/> after menu is launched
