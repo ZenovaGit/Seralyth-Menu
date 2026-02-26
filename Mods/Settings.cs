@@ -193,6 +193,46 @@ namespace Seralyth.Mods
         public static void StopCurrentPrompt() =>
             prompts.RemoveAt(0);
 
+        public static void MergePreferences_iisStupidMenu()
+        {
+            string directoryToUse = "iisStupidMenu";
+            string preferences = "iiMenu_Preferences.txt";
+
+            if (!Directory.Exists(directoryToUse))
+                return;
+
+            string source = Path.Combine(directoryToUse, "Sounds");
+            string destination = Path.Combine(PluginInfo.BaseDirectory, "Sounds");
+
+            if (Directory.Exists(source))
+            {
+                Directory.CreateDirectory(destination);
+
+                foreach (string file in Directory.GetFiles(source, "*", SearchOption.AllDirectories))
+                {
+                    string fileDestination = Path.Combine(destination, Path.GetFileName(file));
+
+                    if (File.Exists(fileDestination))
+                        File.Delete(fileDestination);
+
+                    File.Move(file, fileDestination);
+                }
+            }
+
+            source = Path.Combine(directoryToUse, preferences);
+            destination = Path.Combine(PluginInfo.BaseDirectory, "Seralyth_Preferences.txt");
+
+            if (File.Exists(source))
+            {
+                if (File.Exists(destination))
+                    File.Delete(destination);
+
+                File.Move(source, destination);
+            }
+
+            LoadPreferences();
+        }
+
         public static GameObject TutorialObject;
         public static LineRenderer TutorialSelector;
         public static void ShowTutorial()

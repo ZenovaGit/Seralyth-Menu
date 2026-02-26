@@ -71,7 +71,7 @@ using Random = UnityEngine.Random;
 namespace Seralyth.Menu
 {
     [HarmonyPatch(typeof(GTPlayer), nameof(GTPlayer.LateUpdate))]
-    public class Main : MonoBehaviour // Do not get rid of this. I don't know why, the entire class kills itself. - but ill remove it anyway :wink:
+    public class Main : MonoBehaviour
     {
         /// <summary>
         /// Runs on first frame of <see cref="GTPlayer.LateUpdate"/> after menu is launched
@@ -91,9 +91,14 @@ namespace Seralyth.Menu
             activeFont = AgencyFB;
 
             if (Plugin.FirstLaunch)
-                Prompt("It seems like this is your first time using the menu. Would you like to watch a quick tutorial to get to know how to use it?", Settings.ShowTutorial);
+                if (Directory.Exists("iisStupidMenu"))
+                    Prompt("It seems like you have used ii's Stupid Menu before! Would you like to move all your enabled mods, settings and sounds to Seralyth Menu?", Settings.MergePreferences_iisStupidMenu);
+
+            //if (Plugin.FirstLaunch)
+            //    Prompt("It seems like this is your first time using the menu. Would you like to watch a quick tutorial to get to know how to use it?", Settings.ShowTutorial);
             //else
             //    acceptedDonations = File.Exists($"{PluginInfo.BaseDirectory}/Seralyth_HideDonationButton.txt");
+
 
             NetworkSystem.Instance.OnJoinedRoomEvent += OnJoinRoom;
             NetworkSystem.Instance.OnReturnedToSinglePlayer += OnLeaveRoom;
@@ -3213,19 +3218,19 @@ namespace Seralyth.Menu
                         Toggle("Physical Menu");
 
                     Vector3[] pcPositions = {
+                        TPC?.transform.position ?? GorillaTagger.Instance.headCollider.transform.position,
                         new Vector3(10f, 10f, 10f),
                         new Vector3(10f, 10f, 10f),
                         new Vector3(-67.9299f, 11.9144f, -84.2019f),
                         new Vector3(-63f, 3.634f, -65f),
-                        VRRig.LocalRig.transform.position + VRRig.LocalRig.transform.forward * 1.2f,
-                        TPC?.transform.position ?? GorillaTagger.Instance.headCollider.transform.position
+                        VRRig.LocalRig.transform.position + VRRig.LocalRig.transform.forward * 1.2f
                     };
 
                     TPC.transform.position = pcPositions[pcbg];
-                    if (pcbg != 4 && pcbg != 5)
+                    if (pcbg != 4 && pcbg != 0)
                         TPC.transform.rotation = Quaternion.identity;
 
-                    if (pcbg == 0)
+                    if (pcbg == 5)
                     {
                         if (pcBackground == null)
                         {
@@ -6511,7 +6516,7 @@ namespace Seralyth.Menu
 
         // ReSharper disable once StaticMemberInitializerReferesToMemberBelow
         public static TMP_FontAsset activeFont = LiberationSans;
-        public static FontStyles activeFontStyle = FontStyles.Italic;
+        public static FontStyles activeFontStyle = FontStyles.Normal;
 
         public static TMP_FontAsset AgencyFB;
         public static TMP_FontAsset FreeSans;
@@ -7124,12 +7129,7 @@ jgs \_   _/ |Oo\
             "Penguins give each other pebbles as a way of proposing.",
             "You need oxygen to live.",
             "You need to be nourished to live.",
-            "The letter \"A\" is at the beginning of the alphabet. The letter \"T\" is at the beginning of both of these sentences. Why are you looking there? You're wasting your time. You're wasting even MORE time reading this. Ok bye. STOP READING!!!",
-            "iiDk has a terrible bluetooth keyboard.",
-            "You're wasting your time reading this.",
-            "rocklobster222 is awsum",
-            "kingofnetflix was here </3",
-            "multifactor was also here - kingofnetflix"
+            "The letter \"A\" is at the beginning of the alphabet. The letter \"T\" is at the beginning of both of these sentences. Why are you looking there? You're wasting your time. You're wasting even MORE time reading this. Ok bye. STOP READING!!!"
         };
     }
 }

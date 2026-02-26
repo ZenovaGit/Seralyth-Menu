@@ -42,7 +42,7 @@ namespace Seralyth.Managers
 
         public GameObject canvas;
         private GameObject mainCamera;
-        private Material textMaterial;
+        //private Material textMaterial;
 
         public static string PreviousNotifi;
         /// <summary>
@@ -99,7 +99,7 @@ namespace Seralyth.Managers
             rotation.y = -270f;
             canvasRect.rotation = Quaternion.Euler(rotation);
 
-            textMaterial = new Material(Shader.Find("GUI/Text Shader"));
+            //textMaterial = new Material(Shader.Find("GUI/Text Shader"));
 
             notificationText = CreateText(canvas.transform, new Vector3(-1f, -1f, -0.5f),
                 new Vector2(450f, 210f), 30, TextAlignmentOptions.BottomLeft);
@@ -126,7 +126,7 @@ namespace Seralyth.Managers
             text.overflowMode = anchor == TextAlignmentOptions.BottomLeft ? TextOverflowModes.Overflow : TextOverflowModes.Truncate;
             text.rectTransform.localScale = new Vector3(0.00333333333f, 0.00333333333f, 0.33333333f);
             text.rectTransform.localPosition = localPos;
-            text.material = textMaterial;
+            //text.material = textMaterial;
             text.characterSpacing = -9f;
 
             return text;
