@@ -233,6 +233,7 @@ namespace Seralyth.Mods
             }
 
             LoadPreferences();
+            Sound.LoadSoundboard(false);
         }
 
         public static GameObject TutorialObject;
