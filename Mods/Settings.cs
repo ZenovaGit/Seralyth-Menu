@@ -1013,7 +1013,7 @@ exit 0";
             else 
                 themeType--;
 
-            const int themeCount = 66;
+            const int themeCount = 65;
 
             if (themeType > themeCount)
                 themeType = 1;
@@ -1067,6 +1067,7 @@ exit 0";
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.blue, Color.magenta)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1099,6 +1100,7 @@ exit 0";
                     {
                         colors = ExtGradient.GetSolidGradient(Color.black)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1131,6 +1133,7 @@ exit 0";
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.white, Color.black)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1163,6 +1166,7 @@ exit 0";
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.black, new Color32(110, 0, 0, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1196,6 +1200,7 @@ exit 0";
                         colors = ExtGradient.GetSolidGradient(Color.black),
                         rainbow = true
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1224,46 +1229,13 @@ exit 0";
                         }
                     };
                     break;
-                case 7: // Cone
-                    backgroundColor = new ExtGradient
-                    {
-                        colors = ExtGradient.GetSolidGradient(new Color32(255, 128, 0, 128))
-                    };
-                    buttonColors = new[]
-                    {
-                        new ExtGradient // Released
-                        {
-                            colors = ExtGradient.GetSolidGradient(new Color32(170, 85, 0, 255))
-                        },
-                        new ExtGradient // Pressed
-                        {
-                            colors = ExtGradient.GetSolidGradient(new Color32(85, 42, 0, 255))
-                        }
-                    };
-                    textColors = new[]
-                    {
-                        new ExtGradient // Title
-                        {
-                            colors = ExtGradient.GetSolidGradient(new Color32(255, 190, 125, 255))
-                        },
-                        new ExtGradient // Button Released
-                        {
-                            colors = ExtGradient.GetSolidGradient(new Color32(255, 190, 125, 255))
-                        },
-                        new ExtGradient // Button Clicked
-                        {
-                            colors = ExtGradient.GetSolidGradient(new Color32(255, 190, 125, 255))
-                        }
-                    };
-                    Buttons.GetIndex("Thin Menu").enabled = true;
-                    thinMenu = true;
-                    break;
-                case 8: // Player Material
+                case 7: // Player Material
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(Color.black),
                         copyRigColor = true
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1292,11 +1264,12 @@ exit 0";
                         }
                     };
                     break;
-                case 9: // Lava
+                case 8: // Lava
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.black, new Color32(255, 111, 0, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1324,11 +1297,12 @@ exit 0";
                         }
                     };
                     break;
-                case 10: // Rock
+                case 9: // Rock
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.black, Color.red)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1356,11 +1330,12 @@ exit 0";
                         }
                     };
                     break;
-                case 11: // Ice
+                case 10: // Ice
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.black, new Color32(0, 174, 255, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1388,11 +1363,12 @@ exit 0";
                         }
                     };
                     break;
-                case 12: // Water
+                case 11: // Water
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(new Color32(0, 136, 255, 255), new Color32(0, 174, 255, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1420,11 +1396,12 @@ exit 0";
                         }
                     };
                     break;
-                case 13: // Minty
+                case 12: // Minty
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(new Color32(0, 255, 246, 255), new Color32(0, 255, 144, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1452,11 +1429,12 @@ exit 0";
                         }
                     };
                     break;
-                case 14: // Pink
+                case 13: // Pink
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(new Color32(255, 130, 255, 255), Color.white)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1484,11 +1462,12 @@ exit 0";
                         }
                     };
                     break;
-                case 15: // Purple
+                case 14: // Purple
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(new Color32(122, 35, 159, 255), new Color32(60, 26, 89, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1516,11 +1495,12 @@ exit 0";
                         }
                     };
                     break;
-                case 16: // Magenta Cyan
+                case 15: // Magenta Cyan
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.magenta, Color.cyan)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1548,11 +1528,12 @@ exit 0";
                         }
                     };
                     break;
-                case 17: // Red Fade
+                case 16: // Red Fade
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.red, Color.black)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1580,11 +1561,12 @@ exit 0";
                         }
                     };
                     break;
-                case 18: // Orange Fade
+                case 17: // Orange Fade
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(new Color32(255, 128, 0, 255), Color.black)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1598,7 +1580,7 @@ exit 0";
                     };
                     textColors = new[]
                     {
-                new ExtGradient // Title
+                        new ExtGradient // Title
                         {
                             colors = ExtGradient.GetSolidGradient(new Color32(255, 128, 0, 255))
                         },
@@ -1612,11 +1594,12 @@ exit 0";
                         }
                     };
                     break;
-                case 19: // Yellow Fade
+                case 18: // Yellow Fade
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.yellow, Color.black)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1644,11 +1627,12 @@ exit 0";
                         }
                     };
                     break;
-                case 20: // Green Fade
+                case 19: // Green Fade
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.green, Color.black)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1676,11 +1660,12 @@ exit 0";
                         }
                     };
                     break;
-                case 21: // Blue Fade
+                case 20: // Blue Fade
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.blue, Color.black)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1708,11 +1693,12 @@ exit 0";
                         }
                     };
                     break;
-                case 22: // Purple Fade
+                case 21: // Purple Fade
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(new Color32(119, 0, 255, 255), Color.black)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1740,11 +1726,12 @@ exit 0";
                         }
                     };
                     break;
-                case 23: // Magenta Fade
+                case 22: // Magenta Fade
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.magenta, Color.black)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1772,11 +1759,12 @@ exit 0";
                         }
                     };
                     break;
-                case 24: // Banana
+                case 23: // Banana
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(new Color32(255, 255, 130, 255), Color.white)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1804,11 +1792,12 @@ exit 0";
                         }
                     };
                     break;
-                case 25: // Pride
+                case 24: // Pride
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.red, Color.green)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1836,11 +1825,12 @@ exit 0";
                         }
                     };
                     break;
-                case 26: // Trans
+                case 25: // Trans
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(new Color32(245, 169, 184, 255), new Color32(91, 206, 250, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1868,11 +1858,12 @@ exit 0";
                         }
                     };
                     break;
-                case 27: // MLM or Gay
+                case 26: // MLM or Gay
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(new Color32(7, 141, 112, 255), new Color32(61, 26, 220, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1900,11 +1891,12 @@ exit 0";
                         }
                     };
                     break;
-                case 28: // Steal (old)
+                case 27: // Steal (old)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(50, 50, 50, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1932,11 +1924,12 @@ exit 0";
                         }
                     };
                     break;
-                case 29: // Silence
+                case 28: // Silence
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.black, new Color32(80, 0, 80, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1964,12 +1957,13 @@ exit 0";
                         }
                     };
                     break;
-                case 30: // Transparent
+                case 29: // Transparent
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(Color.black),
                         transparent = true
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -1999,11 +1993,12 @@ exit 0";
                         }
                     };
                     break;
-                case 31: // King
+                case 30: // King
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(100, 60, 170, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2031,11 +2026,12 @@ exit 0";
                         }
                     };
                     break;
-                case 32: // Scoreboard
+                case 31: // Scoreboard
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(0, 59, 4, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2063,11 +2059,12 @@ exit 0";
                         }
                     };
                     break;
-                case 33: // Scoreboard (banned)
+                case 32: // Scoreboard (banned)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(225, 73, 43, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2095,11 +2092,12 @@ exit 0";
                         }
                     };
                     break;
-                case 34: // Rift
+                case 33: // Rift
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(25, 25, 25, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2127,11 +2125,12 @@ exit 0";
                         }
                     };
                     break;
-                case 35: // Blurple Dark
+                case 34: // Blurple Dark
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(26, 26, 61, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2159,11 +2158,12 @@ exit 0";
                         }
                     };
                     break;
-                case 36: // ShibaGT Gold
+                case 35: // ShibaGT Gold
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.black, Color.gray)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2191,11 +2191,12 @@ exit 0";
                         }
                     };
                     break;
-                case 37: // ShibaGT Genesis
+                case 36: // ShibaGT Genesis
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(Color.black)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2223,11 +2224,12 @@ exit 0";
                         }
                     };
                     break;
-                case 38: // wyvern
+                case 37: // wyvern
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(new Color32(199, 115, 173, 255), new Color32(165, 233, 185, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2255,11 +2257,12 @@ exit 0";
                         }
                     };
                     break;
-                case 39: // Steal (new)
+                case 38: // Steal (new)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(27, 27, 27, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2287,11 +2290,12 @@ exit 0";
                         }
                     };
                     break;
-                case 40: // USA Menu (lol)
+                case 39: // USA Menu (lol)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.black, new Color32(100, 25, 125, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2319,11 +2323,12 @@ exit 0";
                         }
                     };
                     break;
-                case 41: // Watch
+                case 40: // Watch
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(27, 27, 27, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2351,11 +2356,12 @@ exit 0";
                         }
                     };
                     break;
-                case 42: // AZ Menu
+                case 41: // AZ Menu
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.black, new Color32(100, 0, 0, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2383,11 +2389,12 @@ exit 0";
                         }
                     };
                     break;
-                case 43: // ImGUI
+                case 42: // ImGUI
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(21, 22, 23, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2415,11 +2422,12 @@ exit 0";
                         }
                     };
                     break;
-                case 44: // Clean Dark
+                case 43: // Clean Dark
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(Color.black)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2447,11 +2455,12 @@ exit 0";
                         }
                     };
                     break;
-                case 45: // Discord Light Mode (lmfao)
+                case 44: // Discord Light Mode (lmfao)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(Color.white)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2479,11 +2488,12 @@ exit 0";
                         }
                     };
                     break;
-                case 46: // The Hub
+                case 45: // The Hub
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(Color.black)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2511,12 +2521,13 @@ exit 0";
                         }
                     };
                     break;
-                case 47: // EPILEPTIC
+                case 46: // EPILEPTIC
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(Color.black),
                         epileptic = true
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2545,11 +2556,12 @@ exit 0";
                         }
                     };
                     break;
-                case 48: // Discord Blurple
+                case 47: // Discord Blurple
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(new Color32(111, 143, 255, 255), new Color32(163, 184, 255, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2577,11 +2589,12 @@ exit 0";
                         }
                     };
                     break;
-                case 49: // VS Zero
+                case 48: // VS Zero
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(19, 22, 27, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2609,11 +2622,12 @@ exit 0";
                         }
                     };
                     break;
-                case 50: // Weed theme (for v4.2.0) (also 50th theme)
+                case 49: // Weed theme
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(new Color32(0, 136, 16, 255), new Color32(0, 127, 14, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2641,12 +2655,13 @@ exit 0";
                         }
                     };
                     break;
-                case 51: // Pastel Rainbow
+                case 50: // Pastel Rainbow
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(Color.white),
                         pastelRainbow = true
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2675,11 +2690,12 @@ exit 0";
                         }
                     };
                     break;
-                case 52: // Rift Light
+                case 51: // Rift Light
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(25, 25, 25, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2707,11 +2723,12 @@ exit 0";
                         }
                     };
                     break;
-                case 53: // Rose (Solace)
+                case 52: // Rose (Solace)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(176, 12, 64, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2739,11 +2756,12 @@ exit 0";
                         }
                     };
                     break;
-                case 54: // Tenacity (Solace)
+                case 53: // Tenacity (Solace)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(124, 25, 194, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2771,11 +2789,12 @@ exit 0";
                         }
                     };
                     break;
-                case 55: // e621 (for version 6.2.1)
+                case 54: // e621 (by iiDk)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(1, 73, 149, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2803,11 +2822,12 @@ exit 0";
                         }
                     };
                     break;
-                case 56: // Catppuccin Mocha
+                case 55: // Catppuccin Mocha
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(30, 30, 46, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2835,11 +2855,12 @@ exit 0";
                         }
                     };
                     break;
-                case 57: // Rexon
+                case 56: // Rexon
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(45, 25, 75, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2867,11 +2888,12 @@ exit 0";
                         }
                     };
                     break;
-                case 58: // Tenacity (Minecraft)
+                case 57: // Tenacity (Minecraft)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(32, 32, 32, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2899,11 +2921,12 @@ exit 0";
                         }
                     };
                     break;
-                case 59: // Mint Blue (Opal v2)
+                case 58: // Mint Blue (Opal v2)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(32, 32, 32, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2929,13 +2952,14 @@ exit 0";
                         {
                             colors = ExtGradient.GetSolidGradient(Color.white)
                         }
-            };
+                    };
                     break;
-                case 60: // Pink Blood (Opal v2)
+                case 59: // Pink Blood (Opal v2)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(32, 32, 32, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2963,11 +2987,12 @@ exit 0";
                         }
                     };
                     break;
-                case 61: // Purple Fire (Opal v2)
+                case 60: // Purple Fire (Opal v2)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(32, 32, 32, 255))
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -2995,7 +3020,7 @@ exit 0";
                         }
                     };
                     break;
-                case 62: // Deep Ocean (Opal v2)
+                case 61: // Deep Ocean (Opal v2)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(new Color32(32, 32, 32, 255))
@@ -3027,11 +3052,12 @@ exit 0";
                         }
                     };
                     break;
-                case 63: // Bad Apple (thanks random person in vc for idea)
+                case 62: // Bad Apple (thanks random person in vc for idea)
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSimpleGradient(Color.black, Color.white)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -3059,11 +3085,12 @@ exit 0";
                         }
                     };
                     break;
-                case 64: // coolkidd
+                case 63: // coolkidd
                     backgroundColor = new ExtGradient
                     {
                         colors = ExtGradient.GetSolidGradient(Color.red)
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -3091,7 +3118,7 @@ exit 0";
                         }
                     };
                     break;
-                case 65: // Old ShibaGT RGB
+                case 64: // Old ShibaGT RGB
                     backgroundColor = new ExtGradient
                     {
                         colors = new[]
@@ -3102,6 +3129,7 @@ exit 0";
                             new GradientColorKey(Color.red, 1f),
                         }
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released
@@ -3135,7 +3163,7 @@ exit 0";
                         }
                     };
                     break;
-                case 66: // Old-ish ShibaGT RGB
+                case 65: // Old-ish ShibaGT RGB
                     backgroundColor = new ExtGradient
                     {
                         colors = new[]
@@ -3148,6 +3176,7 @@ exit 0";
                             new GradientColorKey(Color.yellow, 1f)
                         }
                     };
+                    menuBackgroundColor = backgroundColor;
                     buttonColors = new[]
                     {
                         new ExtGradient // Released

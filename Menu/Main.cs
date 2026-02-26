@@ -576,7 +576,7 @@ namespace Seralyth.Menu
                 }
 
                 // Bad apple theme
-                if (themeType == 63)
+                if (themeType == 62)
                 {
                     if (menu != null)
                     {
@@ -2467,6 +2467,7 @@ namespace Seralyth.Menu
                 textColors[2] = new ExtGradient { colors = ExtGradient.GetSimpleGradient(RandomColor(), RandomColor()) };
             }
 
+            /*
             if (themeType == 7)
             {
                 GameObject coneBackground = LoadObject<GameObject>("Cone");
@@ -2477,137 +2478,138 @@ namespace Seralyth.Menu
             }
             else
             {
-                menuBackground = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                Destroy(menuBackground.GetComponent<BoxCollider>());
+            */
+            menuBackground = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            Destroy(menuBackground.GetComponent<BoxCollider>());
 
-                menuBackground.transform.parent = menu.transform;
-                menuBackground.transform.localPosition = new Vector3(0.50f, 0f, 0f);
-                menuBackground.transform.rotation = Quaternion.identity;
+            menuBackground.transform.parent = menu.transform;
+            menuBackground.transform.localPosition = new Vector3(0.50f, 0f, 0f);
+            menuBackground.transform.rotation = Quaternion.identity;
 
-                // Size is calculated in depth, width, height
-                menuBackground.transform.localScale = thinMenu ? new Vector3(0.1f, 1f, 1f) : new Vector3(0.1f, 1.5f, 1f);
+            // Size is calculated in depth, width, height
+            menuBackground.transform.localScale = thinMenu ? new Vector3(0.1f, 1f, 1f) : new Vector3(0.1f, 1.5f, 1f);
 
-                if (innerOutline || themeType == 34)
+            if (innerOutline || themeType == 33)
+            {
+                GameObject innerOutlineSegment = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                Destroy(innerOutlineSegment.GetComponent<BoxCollider>());
+                innerOutlineSegment.transform.parent = menuBackground.transform;
+                innerOutlineSegment.transform.rotation = Quaternion.identity;
+                innerOutlineSegment.transform.localPosition = new Vector3(0f, -0.4840625f, 0f);
+                innerOutlineSegment.transform.localScale = new Vector3(1.025f, 0.0065f, 0.98f);
+
+                ColorChanger colorChanger = innerOutlineSegment.AddComponent<ColorChanger>();
+                colorChanger.colors = buttonColors[1];
+
+                innerOutlineSegment = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                Destroy(innerOutlineSegment.GetComponent<BoxCollider>());
+                innerOutlineSegment.transform.parent = menuBackground.transform;
+                innerOutlineSegment.transform.rotation = Quaternion.identity;
+                innerOutlineSegment.transform.localPosition = new Vector3(0f, 0.4840625f, 0f);
+                innerOutlineSegment.transform.localScale = new Vector3(1.025f, 0.0065f, 0.98f);
+
+                colorChanger = innerOutlineSegment.AddComponent<ColorChanger>();
+                colorChanger.colors = buttonColors[1];
+
+                innerOutlineSegment = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                Destroy(innerOutlineSegment.GetComponent<BoxCollider>());
+                innerOutlineSegment.transform.parent = menuBackground.transform;
+                innerOutlineSegment.transform.rotation = Quaternion.identity;
+                innerOutlineSegment.transform.localPosition = new Vector3(0f, 0f, -0.4875f);
+                innerOutlineSegment.transform.localScale = new Vector3(1.025f, 0.968125f, 0.005f);
+
+                colorChanger = innerOutlineSegment.AddComponent<ColorChanger>();
+                colorChanger.colors = buttonColors[1];
+
+                innerOutlineSegment = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                Destroy(innerOutlineSegment.GetComponent<BoxCollider>());
+                innerOutlineSegment.transform.parent = menuBackground.transform;
+                innerOutlineSegment.transform.rotation = Quaternion.identity;
+                innerOutlineSegment.transform.localPosition = new Vector3(0f, 0f, 0.4875f);
+                innerOutlineSegment.transform.localScale = new Vector3(1.025f, 0.968125f, 0.005f);
+
+                colorChanger = innerOutlineSegment.AddComponent<ColorChanger>();
+                colorChanger.colors = buttonColors[1];
+            }
+
+            if (themeType == 24 || themeType == 25 || themeType == 26 || themeType == 62)
+            {
+                Renderer menuBackgroundRenderer = menuBackground.GetComponent<Renderer>();
+                switch (themeType)
                 {
-                    GameObject innerOutlineSegment = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                    Destroy(innerOutlineSegment.GetComponent<BoxCollider>());
-                    innerOutlineSegment.transform.parent = menuBackground.transform;
-                    innerOutlineSegment.transform.rotation = Quaternion.identity;
-                    innerOutlineSegment.transform.localPosition = new Vector3(0f, -0.4840625f, 0f);
-                    innerOutlineSegment.transform.localScale = new Vector3(1.025f, 0.0065f, 0.98f);
+                    case 25:
+                        if (pride == null)
+                        {
+                            pride = LoadTextureFromURL($"{PluginInfo.ServerResourcePath}/Images/Themes/pride.png", "Images/Themes/pride.png");
+                            pride.filterMode = FilterMode.Point;
+                            pride.wrapMode = TextureWrapMode.Clamp;
+                        }
+                        menuBackgroundRenderer.material.shader = Shader.Find("Universal Render Pipeline/Unlit");
+                        menuBackgroundRenderer.material.color = Color.white;
+                        menuBackgroundRenderer.material.mainTexture = pride;
+                        break;
+                    case 26:
+                        if (trans == null)
+                        {
+                            trans = LoadTextureFromURL($"{PluginInfo.ServerResourcePath}/Images/Themes/trans.png", "Images/Themes/trans.png");
+                            trans.filterMode = FilterMode.Point;
+                            trans.wrapMode = TextureWrapMode.Clamp;
+                        }
+                        menuBackgroundRenderer.material.shader = Shader.Find("Universal Render Pipeline/Unlit");
+                        menuBackgroundRenderer.material.color = Color.white;
+                        menuBackgroundRenderer.material.mainTexture = trans;
+                        break;
+                    case 27:
+                        if (gay == null)
+                        {
+                            gay = LoadTextureFromURL($"{PluginInfo.ServerResourcePath}/Images/Themes/mlm.png", "Images/Themes/mlm.png");
+                            gay.filterMode = FilterMode.Point;
+                            gay.wrapMode = TextureWrapMode.Clamp;
+                        }
+                        menuBackgroundRenderer.material.shader = Shader.Find("Universal Render Pipeline/Unlit");
+                        menuBackgroundRenderer.material.color = Color.white;
+                        menuBackgroundRenderer.material.mainTexture = gay;
+                        break;
+                    case 63:
+                        if (videoPlayer == null)
+                        {
+                            videoPlayer = new GameObject("Seralyth_VideoPlayer").AddComponent<VideoPlayer>();
+                            videoPlayer.playOnAwake = true;
+                            videoPlayer.isLooping = true;
+                            videoPlayer.url = $"{PluginInfo.ServerResourcePath}/Videos/Themes/badapple.mp4";
 
-                    ColorChanger colorChanger = innerOutlineSegment.AddComponent<ColorChanger>();
-                    colorChanger.colors = buttonColors[1];
+                            RenderTexture rt = new RenderTexture(192, 144, 0);
+                            rt.Create();
 
-                    innerOutlineSegment = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                    Destroy(innerOutlineSegment.GetComponent<BoxCollider>());
-                    innerOutlineSegment.transform.parent = menuBackground.transform;
-                    innerOutlineSegment.transform.rotation = Quaternion.identity;
-                    innerOutlineSegment.transform.localPosition = new Vector3(0f, 0.4840625f, 0f);
-                    innerOutlineSegment.transform.localScale = new Vector3(1.025f, 0.0065f, 0.98f);
+                            videoPlayer.targetTexture = rt;
+                        }
 
-                    colorChanger = innerOutlineSegment.AddComponent<ColorChanger>();
-                    colorChanger.colors = buttonColors[1];
+                        menuBackgroundRenderer.material.shader = Shader.Find("Universal Render Pipeline/Unlit");
+                        menuBackgroundRenderer.material.color = Color.white;
+                        menuBackgroundRenderer.material.SetTexture("_BaseMap", videoPlayer.targetTexture);
 
-                    innerOutlineSegment = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                    Destroy(innerOutlineSegment.GetComponent<BoxCollider>());
-                    innerOutlineSegment.transform.parent = menuBackground.transform;
-                    innerOutlineSegment.transform.rotation = Quaternion.identity;
-                    innerOutlineSegment.transform.localPosition = new Vector3(0f, 0f, -0.4875f);
-                    innerOutlineSegment.transform.localScale = new Vector3(1.025f, 0.968125f, 0.005f);
+                        videoPlayer.time = badAppleTime;
 
-                    colorChanger = innerOutlineSegment.AddComponent<ColorChanger>();
-                    colorChanger.colors = buttonColors[1];
-
-                    innerOutlineSegment = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                    Destroy(innerOutlineSegment.GetComponent<BoxCollider>());
-                    innerOutlineSegment.transform.parent = menuBackground.transform;
-                    innerOutlineSegment.transform.rotation = Quaternion.identity;
-                    innerOutlineSegment.transform.localPosition = new Vector3(0f, 0f, 0.4875f);
-                    innerOutlineSegment.transform.localScale = new Vector3(1.025f, 0.968125f, 0.005f);
-
-                    colorChanger = innerOutlineSegment.AddComponent<ColorChanger>();
-                    colorChanger.colors = buttonColors[1];
+                        break;
                 }
-
-                if (themeType == 25 || themeType == 26 || themeType == 27 || themeType == 63)
+            }
+            else
+            {
+                if (doCustomMenuBackground)
                 {
-                    Renderer menuBackgroundRenderer = menuBackground.GetComponent<Renderer>();
-                    switch (themeType)
-                    {
-                        case 25:
-                            if (pride == null)
-                            {
-                                pride = LoadTextureFromURL($"{PluginInfo.ServerResourcePath}/Images/Themes/pride.png", "Images/Themes/pride.png");
-                                pride.filterMode = FilterMode.Point;
-                                pride.wrapMode = TextureWrapMode.Clamp;
-                            }
-                            menuBackgroundRenderer.material.shader = Shader.Find("Universal Render Pipeline/Unlit");
-                            menuBackgroundRenderer.material.color = Color.white;
-                            menuBackgroundRenderer.material.mainTexture = pride;
-                            break;
-                        case 26:
-                            if (trans == null)
-                            {
-                                trans = LoadTextureFromURL($"{PluginInfo.ServerResourcePath}/Images/Themes/trans.png", "Images/Themes/trans.png");
-                                trans.filterMode = FilterMode.Point;
-                                trans.wrapMode = TextureWrapMode.Clamp;
-                            }
-                            menuBackgroundRenderer.material.shader = Shader.Find("Universal Render Pipeline/Unlit");
-                            menuBackgroundRenderer.material.color = Color.white;
-                            menuBackgroundRenderer.material.mainTexture = trans;
-                            break;
-                        case 27:
-                            if (gay == null)
-                            {
-                                gay = LoadTextureFromURL($"{PluginInfo.ServerResourcePath}/Images/Themes/mlm.png", "Images/Themes/mlm.png");
-                                gay.filterMode = FilterMode.Point;
-                                gay.wrapMode = TextureWrapMode.Clamp;
-                            }
-                            menuBackgroundRenderer.material.shader = Shader.Find("Universal Render Pipeline/Unlit");
-                            menuBackgroundRenderer.material.color = Color.white;
-                            menuBackgroundRenderer.material.mainTexture = gay;
-                            break;
-                        case 63:
-                            if (videoPlayer == null)
-                            {
-                                videoPlayer = new GameObject("Seralyth_VideoPlayer").AddComponent<VideoPlayer>();
-                                videoPlayer.playOnAwake = true;
-                                videoPlayer.isLooping = true;
-                                videoPlayer.url = $"{PluginInfo.ServerResourcePath}/Videos/Themes/badapple.mp4";
-
-                                RenderTexture rt = new RenderTexture(192, 144, 0);
-                                rt.Create();
-
-                                videoPlayer.targetTexture = rt;
-                            }
-
-                            menuBackgroundRenderer.material.shader = Shader.Find("Universal Render Pipeline/Unlit");
-                            menuBackgroundRenderer.material.color = Color.white;
-                            menuBackgroundRenderer.material.SetTexture("_BaseMap", videoPlayer.targetTexture);
-
-                            videoPlayer.time = badAppleTime;
-
-                            break;
-                    }
+                    menuBackground.GetComponent<Renderer>().material.shader = Shader.Find("Universal Render Pipeline/Unlit");
+                    menuBackground.GetComponent<Renderer>().material.color = Color.white;
+                    menuBackground.GetComponent<Renderer>().material.mainTexture = customMenuBackgroundImage;
                 }
                 else
                 {
-                    if (doCustomMenuBackground)
-                    {
-                        menuBackground.GetComponent<Renderer>().material.shader = Shader.Find("Universal Render Pipeline/Unlit");
-                        menuBackground.GetComponent<Renderer>().material.color = Color.white;
-                        menuBackground.GetComponent<Renderer>().material.mainTexture = customMenuBackgroundImage;
-                    }
-                    else
-                    {
-                        ColorChanger colorChanger = menuBackground.AddComponent<ColorChanger>();
-                        colorChanger.colors = menuBackgroundColor;
-                    }
+                    ColorChanger colorChanger = menuBackground.AddComponent<ColorChanger>();
+                    colorChanger.colors = menuBackgroundColor;
                 }
-
-                FollowMenuSettings(menuBackground, false);
             }
+
+            FollowMenuSettings(menuBackground, false);
+            //}
 
             canvasObj = new GameObject();
             canvasObj.transform.parent = menu.transform;
@@ -2877,7 +2879,7 @@ namespace Seralyth.Menu
                 keyboardInputObject.richText = true;
                 keyboardInputObject.fontSize = 1;
 
-                if (joystickMenu && joystickButtonSelected == 0 && themeType == 30)
+                if (joystickMenu && joystickButtonSelected == 0 && themeType == 29)
                     keyboardInputObject.color = Color.red;
                 else
                     keyboardInputObject.AddComponent<UIColorChanger>().colors = textColors[1];
@@ -3031,7 +3033,7 @@ namespace Seralyth.Menu
 
             RecenterMenu();
 
-            if (themeType == 50)
+            if (themeType == 49)
             {
                 for (int i = 0; i < 15; i++)
                 {
@@ -3232,7 +3234,7 @@ namespace Seralyth.Menu
                             OnMenuClosed += () => Destroy(pcBackground);
                         }
                         
-                        Color realcolor = backgroundColor.GetCurrentColor();
+                        Color realcolor = menuBackgroundColor.GetCurrentColor();
                         pcBackground.GetComponent<Renderer>().material.color = new Color32((byte)(realcolor.r * 50), (byte)(realcolor.g * 50), (byte)(realcolor.b * 50), 255);
                     }
 

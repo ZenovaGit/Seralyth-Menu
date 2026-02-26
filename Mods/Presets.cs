@@ -45,7 +45,7 @@ namespace Seralyth.Mods
                 "Fix Rig Colors",
             };
 
-            themeType = 29;
+            themeType = 28;
             pageButtonType = 1;
             fontCycle = -1;
 
@@ -110,7 +110,7 @@ namespace Seralyth.Mods
                 "Disable Ghostview"
             };
 
-            themeType = 31;
+            themeType = 30;
             pageButtonType = 1;
             fontCycle = 0;
 
@@ -137,7 +137,7 @@ namespace Seralyth.Mods
                 "Show Anti Cheat Reports <color=grey>[</color><color=green>Self</color><color=grey>]</color>"
             };
 
-            themeType = 34;
+            themeType = 33;
             pageButtonType = 1;
             fontCycle = 0;
 
