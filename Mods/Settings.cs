@@ -215,7 +215,7 @@ namespace Seralyth.Mods
                     if (File.Exists(fileDestination))
                         File.Delete(fileDestination);
 
-                    File.Move(file, fileDestination);
+                    File.Copy(file, fileDestination);
                 }
             }
 
@@ -227,7 +227,7 @@ namespace Seralyth.Mods
                 if (File.Exists(destination))
                     File.Delete(destination);
 
-                File.Move(source, destination);
+                File.Copy(source, destination);
             }
 
             LoadPreferences();
