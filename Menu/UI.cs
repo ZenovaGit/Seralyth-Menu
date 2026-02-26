@@ -191,7 +191,7 @@ namespace Seralyth.Menu
                 roomStatus.SafeSetFontStyle(activeFontStyle);
                 arraylist.SafeSetFontStyle(activeFontStyle);
 
-                controlBackground.color = backgroundColor.GetCurrentColor();
+                controlBackground.color = menuBackgroundColor.GetCurrentColor();
 
                 foreach (var textObject in textObjects)
                 {

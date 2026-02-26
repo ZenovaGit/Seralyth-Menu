@@ -93,7 +93,7 @@ namespace Seralyth.Mods
                     menuSpawnPosition.transform.localScale *= scaleWithPlayer ? GTPlayer.Instance.scale * menuScale : menuScale;
 
                     ColorChanger backgroundColorChanger = VRKeyboard.transform.Find("Background").gameObject.AddComponent<ColorChanger>();
-                    backgroundColorChanger.colors = backgroundColor;
+                    backgroundColorChanger.colors = menuBackgroundColor;
 
                     foreach (GameObject key in VRKeyboard.transform.Find("Seperate").Children()
                         .Select(t => t.gameObject)
