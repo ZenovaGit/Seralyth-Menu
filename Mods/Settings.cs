@@ -206,16 +206,18 @@ namespace Seralyth.Mods
 
             if (Directory.Exists(source))
             {
-                Directory.CreateDirectory(destination);
+                foreach (string dir in Directory.GetDirectories(source, "*", SearchOption.AllDirectories))
+                {
+                    string newDir = dir.Replace(source, destination);
+                    Directory.CreateDirectory(newDir);
+                }
 
                 foreach (string file in Directory.GetFiles(source, "*", SearchOption.AllDirectories))
                 {
-                    string fileDestination = Path.Combine(destination, Path.GetFileName(file));
+                    string newFile = file.Replace(source, destination);
 
-                    if (File.Exists(fileDestination))
-                        File.Delete(fileDestination);
-
-                    File.Copy(file, fileDestination);
+                    Directory.CreateDirectory(Path.GetDirectoryName(newFile)!);
+                    File.Copy(file, newFile, true); // overwrite = true
                 }
             }
 
