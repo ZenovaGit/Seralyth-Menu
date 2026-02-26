@@ -42,7 +42,7 @@ namespace Seralyth.Managers
 
         public GameObject canvas;
         private GameObject mainCamera;
-        private Material textMaterial;
+        //private Material textMaterial;
 
         public static string PreviousNotifi;
         /// <summary>

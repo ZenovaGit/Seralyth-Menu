@@ -71,7 +71,7 @@ using Random = UnityEngine.Random;
 namespace Seralyth.Menu
 {
     [HarmonyPatch(typeof(GTPlayer), nameof(GTPlayer.LateUpdate))]
-    public class Main : MonoBehaviour // Do not get rid of this. I don't know why, the entire class kills itself. - but ill remove it anyway :wink:
+    public class Main : MonoBehaviour
     {
         /// <summary>
         /// Runs on first frame of <see cref="GTPlayer.LateUpdate"/> after menu is launched
@@ -90,10 +90,15 @@ namespace Seralyth.Menu
             InitializeFonts();
             activeFont = AgencyFB;
 
+            if (Plugin.FirstLaunch)
+                if (Directory.Exists("iisStupidMenu"))
+                    Prompt("It seems like you have used ii's Stupid Menu before! Would you like to move all your enabled mods, settings and sounds to Seralyth Menu?", Settings.MergePreferences_iisStupidMenu);
+
             //if (Plugin.FirstLaunch)
             //    Prompt("It seems like this is your first time using the menu. Would you like to watch a quick tutorial to get to know how to use it?", Settings.ShowTutorial);
             //else
             //    acceptedDonations = File.Exists($"{PluginInfo.BaseDirectory}/Seralyth_HideDonationButton.txt");
+
 
             NetworkSystem.Instance.OnJoinedRoomEvent += OnJoinRoom;
             NetworkSystem.Instance.OnReturnedToSinglePlayer += OnLeaveRoom;
