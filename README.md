@@ -3,7 +3,7 @@
     <img src="Resources/GitHub/icon-transparent.png" width="130">
   </a>
   <a href="#">
-    <img src="Resources/GitHub/title.png" width="320">
+    <img src="Resources/GitHub/title.png" width="400">
   </a>
 </p>
 
