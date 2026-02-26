@@ -217,7 +217,7 @@ namespace Seralyth.Mods
                     string newFile = file.Replace(source, destination);
 
                     Directory.CreateDirectory(Path.GetDirectoryName(newFile)!);
-                    File.Copy(file, newFile, true); // overwrite = true
+                    File.Copy(file, newFile);
                 }
             }
 
@@ -226,14 +226,32 @@ namespace Seralyth.Mods
 
             if (File.Exists(source))
             {
-                if (File.Exists(destination))
-                    File.Delete(destination);
+                string[] lines = File.ReadAllLines(source);
 
-                File.Copy(source, destination);
+                if (lines.Length >= 5) // this is very bad but it basically shifts some values from ii's menu to fit with this
+                {
+                    string[] settings = lines[2].Split(new[] { ";;" }, StringSplitOptions.None);
+
+                    int pcbgIndex = 13;
+
+                    if (pcbgIndex < settings.Length && int.TryParse(settings[pcbgIndex], out int pcbgVal))
+                        settings[pcbgIndex] = (pcbgVal + 1).ToString();
+
+                    lines[2] = string.Join(";;", settings);
+
+                    if (int.TryParse(lines[3], out int pageType))
+                        lines[3] = (pageType - 1).ToString();
+
+                    if (int.TryParse(lines[4], out int theme))
+                        lines[4] = (theme - 1).ToString();
+                }
+
+                File.WriteAllLines(destination, lines);
             }
 
             LoadPreferences();
             Sound.LoadSoundboard(false);
+            NotificationManager.SendNotification("<color=grey>[</color><color=green>SUCCESS</color><color=grey>]</color> Successfully completed merge. Have fun using Seralyth Menu!");
         }
 
         public static GameObject TutorialObject;
@@ -4817,7 +4835,7 @@ exit 0";
         // Thanks to kingofnetflix for inspiration and support with voice recognition
         private static KeywordRecognizer mainPhrases;
         private static KeywordRecognizer modPhrases;
-        private static string[] keyWords = { "jarvis", "ii", "i i", "eye eye", "siri", "google", "alexa", "dummy", "computer", "stinky", "silly", "stupid", "console", "go go gadget", "monika", "wikipedia", "gideon", "a i", "ai", "a.i", "chat gpt", "chatgpt", "grok", "grock", "garmin" };
+        private static string[] keyWords = { "jarvis", "seralyth", "seralith", "siri", "google", "alexa", "dummy", "computer", "stinky", "silly", "stupid", "console", "go go gadget", "monika", "wikipedia", "gideon", "a i", "ai", "a.i", "chat gpt", "chatgpt", "grok", "grock", "groq", "garmin" };
         private static readonly string[] cancelKeywords = { "nevermind", "cancel", "never mind", "stop", "i hate you", "die" };
         public static void VoiceRecognitionOn()
         {
