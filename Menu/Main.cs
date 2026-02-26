@@ -2812,6 +2812,9 @@ namespace Seralyth.Menu
                 fpsTransform.localPosition = new Vector3(0.06f, 0f, hidetitle ? 0.175f : 0.135f);
                 fpsTransform.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
 
+                if (hideTextOnCamera)
+                    fpsTransform.gameObject.layer = 19;
+
                 FollowMenuSettings(fps);
             }
 
