@@ -1997,6 +1997,9 @@ namespace Seralyth.Menu
             if (NoAutoSizeText)
                 textTransform.sizeDelta = new Vector2(9f, 0.015f);
 
+            if (hideTextOnCamera)
+                textTransform.gameObject.layer = 19;
+
             textTransform.localPosition = new Vector3(.064f, 0, .111f - offset / 2.6f);
             textTransform.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
 
@@ -2417,6 +2420,9 @@ namespace Seralyth.Menu
             if (NoAutoSizeText)
                 textTransform.sizeDelta = new Vector2(9f, 0.015f);
 
+            if (hideTextOnCamera)
+                textTransform.gameObject.layer = 19;
+
             textTransform.localPosition = thinMenu ? new Vector3(.064f, increment ? -0.12f : 0.12f, .111f - offset / 2.6f) : new Vector3(.064f, increment ? -0.18f : 0.18f, .111f - offset / 2.6f);
             textTransform.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
 
@@ -2703,6 +2709,9 @@ namespace Seralyth.Menu
                 if (NoAutoSizeText)
                     component.sizeDelta = new Vector2(0.28f, 0.015f);
 
+                if (hideTextOnCamera)
+                    component.gameObject.layer = 19;
+                    
                 component.localPosition = new Vector3(0.06f, 0f, 0.165f);
                 component.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
 
@@ -2901,6 +2910,9 @@ namespace Seralyth.Menu
                 textTransform.sizeDelta = new Vector2(.2f, .03f * (ButtonDistance / 0.1f));
                 if (NoAutoSizeText)
                     textTransform.sizeDelta = new Vector2(9f, 0.015f);
+
+                if (hideTextOnCamera)
+                    textTransform.gameObject.layer = 19;
 
                 textTransform.localPosition = new Vector3(.064f, 0, .111f - buttonOffset * ButtonDistance / 2.6f);
                 textTransform.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
@@ -3705,6 +3717,9 @@ namespace Seralyth.Menu
                 if (NoAutoSizeText)
                     textRect.sizeDelta = new Vector2(9f, 0.015f);
 
+                if (hideTextOnCamera)
+                    textRect.gameObject.layer = 19;
+
                 textRect.localPosition = new Vector3(0.064f, CurrentPrompt.DeclineText != null ? 0.075f : 0f, -0.16f);
                 textRect.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
 
@@ -3764,6 +3779,9 @@ namespace Seralyth.Menu
 
                 if (NoAutoSizeText)
                     textRect.sizeDelta = new Vector2(9f, 0.015f);
+
+                if (hideTextOnCamera)
+                    textRect.gameObject.layer = 19;
 
                 textRect.localPosition = new Vector3(0.064f, -0.075f, -0.16f);
                 textRect.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
@@ -3830,6 +3848,9 @@ namespace Seralyth.Menu
 
             if (NoAutoSizeText)
                 textRect.sizeDelta = new Vector2(9f, 0.015f);
+
+            if (hideTextOnCamera)
+                textRect.gameObject.layer = 19;
 
             textRect.localPosition = textPosition;
             textRect.rotation = Quaternion.Euler(new Vector3(180f, 90f, 90f));
