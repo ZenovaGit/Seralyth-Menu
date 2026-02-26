@@ -117,7 +117,7 @@ If you wish to support us, here are some of the ways you can!
 |------------|------|---------|
 | Ethereum   | [![ETH](https://img.shields.io/badge/Ethereum-Donate-blue?style=for-the-badge&logo=ethereum)](ethereum:0xc14846DF02f45D02a3A5750B21e6e1533ab129Dd) | [0xc14846DF02f45D02a3A5750B21e6e1533ab129Dd](ethereum:0xc14846DF02f45D02a3A5750B21e6e1533ab129Dd) |
 | Litecoin   | [![LTC](https://img.shields.io/badge/Litecoin-Donate-lightgrey?style=for-the-badge&logo=litecoin)](litecoin:Ld5c7DVKgq7EnCLJs6DhwHi8eLhPYGQtC9) | [Ld5c7DVKgq7EnCLJs6DhwHi8eLhPYGQtC9](litecoin:Ld5c7DVKgq7EnCLJs6DhwHi8eLhPYGQtC9) |
-| Patreon    | [![Patreon](https://img.shields.io/badge/Patreon-iiDk-orange?style=for-the-badge&logo=patreon)](https://www.patreon.com/Seralyth) | [Seralyth](https://www.patreon.com/Seralyth) |
+| Patreon    | [![Patreon](https://img.shields.io/badge/Patreon-Serayth-orange?style=for-the-badge&logo=patreon)](https://www.patreon.com/Seralyth) | [Seralyth](https://www.patreon.com/Seralyth) |
 
 </details>
 
