@@ -243,8 +243,8 @@ namespace Seralyth.Menu
                 rightGrab = ControllerInputPoller.instance.rightGrab || UnityInput.Current.GetKey(Settings.pcBindings[Settings.ControllerBinding.RightGrip]);
                 leftTrigger = ControllerInputPoller.TriggerFloat(XRNode.LeftHand);
                 rightTrigger = ControllerInputPoller.TriggerFloat(XRNode.RightHand);
-                LeftTrig = ControllerInputPoller.instance.leftControllerIndexFloat >= 0.1f;
-                RightTrig = ControllerInputPoller.instance.rightControllerIndexFloat >= 0.1f;
+                leftTriggerPressed = ControllerInputPoller.instance.leftControllerIndexFloat >= 0.5f;
+                rightTriggerPressed = ControllerInputPoller.instance.rightControllerIndexFloat >= 0.5f;
 
                 if (UnityInput.Current.GetKey(Settings.pcBindings[Settings.ControllerBinding.LeftTrigger]))
                     leftTrigger = 1f;
@@ -6887,8 +6887,8 @@ jgs \_   _/ |Oo\
         public static bool rightGrab;
         public static float leftTrigger;
         public static float rightTrigger;
-        public static bool LeftTrig;
-        public static bool RightTrig;
+        public static bool leftTriggerPressed;
+        public static bool rightTriggerPressed;
 
         public static Vector2 leftJoystick = Vector2.zero;
         public static Vector2 rightJoystick = Vector2.zero;
