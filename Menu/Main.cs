@@ -243,8 +243,8 @@ namespace Seralyth.Menu
                 rightGrab = ControllerInputPoller.instance.rightGrab || UnityInput.Current.GetKey(Settings.pcBindings[Settings.ControllerBinding.RightGrip]);
                 leftTrigger = ControllerInputPoller.TriggerFloat(XRNode.LeftHand);
                 rightTrigger = ControllerInputPoller.TriggerFloat(XRNode.RightHand);
-                leftTriggerPressed = ControllerInputPoller.instance.leftControllerIndexFloat >= 0.5f;
-                rightTriggerPressed = ControllerInputPoller.instance.rightControllerIndexFloat >= 0.5f;
+                leftTriggerPressed = leftTrigger >= 0.5f;
+                rightTriggerPressed = rightTrigger >= 0.5f;
 
                 if (UnityInput.Current.GetKey(Settings.pcBindings[Settings.ControllerBinding.LeftTrigger]))
                     leftTrigger = 1f;

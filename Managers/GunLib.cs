@@ -99,7 +99,7 @@ namespace Seralyth.Managers
         #endregion
 
         #region determine button hand/input
-        public static bool DetermineGunHand(bool trigger) => rightGunHand ? (trigger ? RightTrig : rightGrab) : (trigger ? LeftTrig : leftGrab);
+        public static bool DetermineGunHand(bool trigger) => rightGunHand ? (trigger ? rightTriggerPressed : rightGrab) : (trigger ? leftTriggerPressed : leftGrab);
         public static Transform DetermineHand() => rightGunHand ? GTPlayer.Instance.GetControllerTransform(false) : GTPlayer.Instance.GetControllerTransform(true);
         #endregion
 
