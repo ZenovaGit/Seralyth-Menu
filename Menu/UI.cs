@@ -191,6 +191,8 @@ namespace Seralyth.Menu
                 roomStatus.color = guiColor;
                 arraylist.color = guiColor;
                 watermark.color = guiColor;
+                
+                watermark.gameObject.SetActive(!disableWatermark);
 
                 versionLabel.SafeSetFont(activeFont);
                 roomStatus.SafeSetFont(activeFont);
